@@ -1,0 +1,109 @@
+* {
+  border-radius: 5px;
+  /* border: 1px solid red; */
+
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+.title {
+  font-size: 4rem;
+}
+.signIn {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.userCorner {
+  position: absolute;
+  font-size: .75rem;
+  line-height: 25%;
+  text-align: right;
+  right: 5px;
+  top: 5px;
+  padding: 0 5px;
+  border: solid 1px black;
+  background-color: aliceblue;
+}
+
+.target {
+  letter-spacing: 20px;
+}
+.guessStatsBoard {
+  position: absolute;
+  font-size: .75rem;
+  line-height: 25%;
+  text-align: left;
+  left: 5px;
+  top: 5px;
+  padding: 0 5px;
+  background-color: aliceblue;
+  border: solid 1px black;
+}
+/* .progressBar {
+  width: 60%;
+  border: 1px solid black;
+  border-radius: 6px;
+} */
+
+.progressBar {
+  background-color: whiteSmoke;
+  border-radius: 2px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+
+  width: 250px;
+  height: 20px;
+  
+  position: relative;
+  display: block;
+}
+  
+.progressBar > span {
+  background-color: blue;
+  border-radius: 2px;
+
+  display: block;
+  text-indent: -9999px;
+}
+
+.gameWordsFound {
+  list-style: none;
+  display: flex;
+  flex-wrap:wrap;
+  overflow: auto;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.word {
+  flex: 1 0 10%; /* explanation below */
+  margin: 1px;
+}
+
+#guessArea {
+  text-transform:uppercase;
+  text-align: center;
+  font-size: 2rem;
+}
+
+table {
+  margin: auto;
+}
+
+.gameLog {
+  list-style: none;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+
+/* .setting {
+  justify-content: center;
+  display: flex;
+} */
