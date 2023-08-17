@@ -11,6 +11,7 @@ import UserCorner from '../components/UserCorner.jsx';
 import formatNumber from '../utils/formatNumber.js';
 import GameSetupTable from '../components/GameSetupTable.jsx';
 import GameSetupForm from '../components/GameSetupForm.jsx';
+import GameStore from '../components/GameStore.jsx';
 
 
 function GameSetup() {
@@ -95,7 +96,9 @@ function GameSetup() {
       <UserCorner user={user}/>
       <GameSetupForm user={user} size={size} setSize={setSize} setWinType={setWinType} setTimeType={setTimeType} />
       <hr/>
-      <GameSetupTable size={size} timeType={timeType} winType={winType} time={time} />
+      <GameStore user={user} setUser={setUser}/>
+      <hr/>
+      <GameSetupTable size={size} timeType={timeType} winType={winType} time={time} freebies={user.freebies} />
       <button onClick={proceed} autoFocus>Play!</button>
     </>
     )

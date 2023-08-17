@@ -8,7 +8,6 @@ function GameGuess( {guessWord, guessRef} ) {
                 ref= {guessRef}
                 type="text"
                 id='guessArea'
-                placeholder='|'
                 autoFocus
             />
         </form>
