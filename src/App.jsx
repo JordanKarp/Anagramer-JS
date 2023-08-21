@@ -26,6 +26,7 @@ function App() {
 
     return (
         <GameContext.Provider value={[user, setUser]}>
+            <h1>test</h1>
             <Router />
         </GameContext.Provider>
     )
