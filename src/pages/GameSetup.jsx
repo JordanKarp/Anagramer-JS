@@ -23,6 +23,7 @@ function GameSetup() {
   const [time, setTime] = useState()
   const [winType, setWinType] = useState('100')
   const navigate = useNavigate()
+  const [data, errorStatus] = useFetch("../../data/wordListDict-short.json")
 
   // const getWords = async () => {
   //   await fetch("../../data/wordListDict-short.json", {
@@ -45,8 +46,9 @@ function GameSetup() {
   // };
 
   const getWords = () => {
-    const [all, errorStatus] = useFetch("../../data/wordListDict-short.json")
+    // const [all, errorStatus] = useFetch("../../data/wordListDict-short.json")
     console.log("error status:", errorStatus)
+    console.log("data: ", data)
     // setAllWords(all)
   }
 
