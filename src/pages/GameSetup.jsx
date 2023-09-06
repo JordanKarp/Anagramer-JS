@@ -12,7 +12,7 @@ import formatNumber from '../utils/formatNumber.js';
 import GameSetupTable from '../components/GameSetupTable.jsx';
 import GameSetupForm from '../components/GameSetupForm.jsx';
 import GameStore from '../components/GameStore.jsx';
-import useFetch from '../hooks/useFetch.js';
+import useFetch from '../hooks/useFetch.jsx';
 
 
 function GameSetup() {
