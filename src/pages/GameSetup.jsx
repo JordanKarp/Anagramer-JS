@@ -45,9 +45,9 @@ function GameSetup() {
   // };
 
   const getWords = () => {
-    const all = useFetch("../../data/wordListDict-short.json")
-    console.log(all)
-    setAllWords(all)
+    const [all, errorStatus] = useFetch("../../data/wordListDict-short.json")
+    console.log("error status:", errorStatus)
+    // setAllWords(all)
   }
 
   const getTarget = (words) => {

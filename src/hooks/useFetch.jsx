@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export default function useFetch(url) {
     const [data, setData] = useState();
+    const [errorStatus, setErrorStatus] = useState();
 
     useEffect (()=> {
         fetch(url)
@@ -10,8 +11,11 @@ export default function useFetch(url) {
             })
             .then((data) => {
                 setData(data);
+            })
+            .catch((e) => {
+                setErrorStatus(e);
             });
      }, []);
 
-     return data
+     return [data, errorStatus]
 }
