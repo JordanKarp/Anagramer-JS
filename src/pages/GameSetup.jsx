@@ -12,6 +12,7 @@ import formatNumber from '../utils/formatNumber.js';
 import GameSetupTable from '../components/GameSetupTable.jsx';
 import GameSetupForm from '../components/GameSetupForm.jsx';
 import GameStore from '../components/GameStore.jsx';
+import useFetch from '../hooks/useFetch.js';
 
 
 function GameSetup() {
@@ -23,25 +24,31 @@ function GameSetup() {
   const [winType, setWinType] = useState('100')
   const navigate = useNavigate()
 
-  const getWords = async () => {
-    await fetch("../../data/wordListDict-short.json", {
-      headers : {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }})
-      .then((response) => {
-        if (response.ok) { 
-          return response.json();
-        }
-        return Promise.reject(response); 
-      })
-      .then((result) => { 
-        setAllWords(result)
-      })
-      .catch((error) => {
-        console.log('Something went wrong.', error); 
-      });
-  };
+  // const getWords = async () => {
+  //   await fetch("../../data/wordListDict-short.json", {
+  //     headers : {
+  //       'Content-Type': 'application/json',
+  //       'Accept': 'application/json'
+  //      }})
+  //     .then((response) => {
+  //       if (response.ok) { 
+  //         return response.json();
+  //       }
+  //       return Promise.reject(response); 
+  //     })
+  //     .then((result) => { 
+  //       setAllWords(result)
+  //     })
+  //     .catch((error) => {
+  //       console.log('Something went wrong.', error); 
+  //     });
+  // };
+
+  const getWords = () => {
+    const all = useFetch("../../data/wordListDict-short.json")
+    console.log(all)
+    setAllWords(all)
+  }
 
   const getTarget = (words) => {
     const allWordsList = Object.values(words).flat(1)
