@@ -86,6 +86,11 @@
   margin: 1px;
 }
 
+.gameGuess {
+  display: flex;
+  justify-content: center;
+}
+
 #guessArea {
   text-transform:uppercase;
   text-align: center;
