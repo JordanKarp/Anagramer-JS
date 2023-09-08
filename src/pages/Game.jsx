@@ -100,7 +100,7 @@ function Game() {
 
   const gameOver = () => {
     let gameMsg = ''
-    if (user.rounWin >= wordsFound.length/anagrams.length) {
+    if (user.roundWin >= wordsFound.length/anagrams.length) {
       gameMsg = 'You win!'
     } else{
       gameMsg = "You lose."
