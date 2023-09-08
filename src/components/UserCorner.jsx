@@ -1,16 +1,17 @@
-// import { useContext } from "react"
-// import GameContext from "../context/Context"
+import formatNumber from "../utils/formatNumber"
 
 const UserCorner = ({user}) => {
     const {userName, points, freebies, guessStats} = user
 
-    if (user === undefined) return
+    if (user === undefined) {
+      return
+    }
 
     
     return (
         <div className='userCorner'>
             <p><b>{userName}</b></p>
-            <p>Points: {points} </p>
+            <p>Points: {formatNumber(points)} </p>
             <p>Freebies: {freebies} </p>
             {/* <p>Total Guesses: {guessStats.total}</p>
             <p>Correct Guesses: {guessStats.correct}</p>
