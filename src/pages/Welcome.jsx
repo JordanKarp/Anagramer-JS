@@ -18,7 +18,6 @@ function Welcome() {
     } else {
       setMsg('register')
     }
-    // console.log(JSON.stringify(user));
     navigate('/Setup')
   }
 
@@ -47,15 +46,11 @@ function Welcome() {
             <button type='submit' name='register' value="register">Register</button>
            </div>
         </form>
-        <div>
-          
-        </div>
         {msg && <p className="loginMsg">{msg}</p>}
+        <hr/>
+        <p>WARNING: The above sign in form does not currently work. </p>
+        <p>But you can still create a username for this game session using either button.</p>
       </div>
-
-
-      {/* <a href="setup">Play a round! </a> */}
-      {/* <Link to="/setup">Play round!</Link> */}
     </>
   )
 }
