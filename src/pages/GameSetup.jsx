@@ -25,32 +25,32 @@ function GameSetup() {
   const navigate = useNavigate()
   const [data, errorStatus] = useFetch("../../data/wordListDict-short.json")
 
-  // const getWords = async () => {
-  //   await fetch("../../data/wordListDict-short.json", {
-  //     headers : {
-  //       'Content-Type': 'application/json',
-  //       'Accept': 'application/json'
-  //      }})
-  //     .then((response) => {
-  //       if (response.ok) { 
-  //         return response.json();
-  //       }
-  //       return Promise.reject(response); 
-  //     })
-  //     .then((result) => { 
-  //       setAllWords(result)
-  //     })
-  //     .catch((error) => {
-  //       console.log('Something went wrong.', error); 
-  //     });
-  // };
+  const getWords = async () => {
+    await fetch("../../data/wordListDict-short.json", {
+      headers : {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }})
+      .then((response) => {
+        if (response.ok) { 
+          return response.json();
+        }
+        return Promise.reject(response); 
+      })
+      .then((result) => { 
+        setAllWords(result)
+      })
+      .catch((error) => {
+        console.log('Something went wrong.', error); 
+      });
+  };
 
-  const getWords = () => {
-    // const [all, errorStatus] = useFetch("../../data/wordListDict-short.json")
-    console.log("error status:", errorStatus)
-    console.log("data: ", data)
-    // setAllWords(all)
-  }
+  // const getWords = () => {
+  //   // const [all, errorStatus] = useFetch("../../data/wordListDict-short.json")
+  //   console.log("error status:", errorStatus)
+  //   console.log("data: ", data)
+  //   // setAllWords(all)
+  // }
 
   const getTarget = (words) => {
     const allWordsList = Object.values(words).flat(1)
