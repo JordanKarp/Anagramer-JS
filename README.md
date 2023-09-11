@@ -1,8 +1,18 @@
-# React + Vite
+# Anagramer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Given a set of letters, find every English word using any portions of those letters.
 
-Currently, two official plugins are available:
+## How to Play: 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Choose settings for the next game round:
+    - Size - how many letters in the given set/
+    - Time Setting - how much time you are given to find all the words.
+    - Win Setting - how muc you need to find in order to win the round.
+    You may also purchase a freebie word.
+2. Play:
+    - Type words and hit enter to guess
+    - Type 'f' in order to use one of your freebies.
+3. Results:
+    - Store your points and your vocabulary
+    - Any words 'learned' will go toward any future rounds.
+4. There are high score pages for each word size.
