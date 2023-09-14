@@ -7,17 +7,11 @@ const UserCorner = ({user}) => {
       return
     }
 
-    
     return (
         <div className='userCorner'>
             <p><b>{userName}</b></p>
             <p>Points: {formatNumber(points)} </p>
             <p>Freebies: {freebies} </p>
-            {/* <p>Total Guesses: {guessStats.total}</p>
-            <p>Correct Guesses: {guessStats.correct}</p>
-            <p>Incorrect Guesses: {guessStats.incorrect}</p>
-            <p>Repeat Guesses: {guessStats.repeat}</p>
-            <p>Freebie Guesses: {guessStats.freebies}</p> */}
         </div>
     )
 }

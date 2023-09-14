@@ -149,14 +149,14 @@ function Game() {
   return (
     <>
       <TargetHeader target={target.toUpperCase()} />
-      <UserCorner user={user} />
-      <Timer initialTime={time} gameOver={gameOver} />
-      <GuessStatsBoard  guessStats={guessStats} />
-      <GameProgressBar value={wordsFound.length.toString()} max={anagrams.length} />
-      {/* <progress className="progressBar" value={wordsFound.length.toString()} max={anagrams.length}></progress> */}
+      <GameCorner initialTime={time} gameOver={gameOver} wordsFound={wordsFound.length.toString()} totalWords={anagrams.length} />
+      {/* // <UserCorner user={user} /> */}
+      {/* <Timer initialTime={time} gameOver={gameOver} /> */}
+      {/* <GuessStatsBoard  guessStats={guessStats} /> */}
+      {/* <GameProgressBar value={wordsFound.length.toString()} max={anagrams.length} /> */}
       <GameWordsFound anagrams={anagrams} wordsFound={wordsFound} userVocab={[...user.vocab]} />
-      <GameGuess guessWord={guessWord} guessRef={guessRef} />
       <GameLogs logs={logs} />
+      <GameGuess guessWord={guessWord} guessRef={guessRef} />
     </>
      )
 }
