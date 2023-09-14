@@ -7,6 +7,7 @@ function GameGuess( {guessWord, guessRef} ) {
             <input
                 ref= {guessRef}
                 type="text"
+                size="10"
                 autoFocus
             />
         </form>
