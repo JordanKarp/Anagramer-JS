@@ -98,6 +98,8 @@ function Game() {
 
   const gameOver = () => {
     let gameMsg = ''
+    console.log(wordsFound.length/anagrams.length)
+    console.log(user.roundWin)
     if (user.roundWin <= wordsFound.length/anagrams.length) {
       gameMsg = 'You win!'
     } else{

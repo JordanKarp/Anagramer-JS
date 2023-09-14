@@ -52,6 +52,8 @@
   grid-area: 1 / 1 / 2 / 5;
   letter-spacing: 3rem;
   font-size: 3rem;
+  align-self: center;
+
 }
 .gameCorner {
   grid-area: 1 / 5 / 2 / 6;
