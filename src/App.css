@@ -47,6 +47,10 @@
   padding: .5rem;
   }
 
+.gameBoard > * {
+  border: 1px solid black;
+}
+
 .target {
   grid-area: 1 / 1 / 2 / 5;
   font-size: 3rem;
@@ -55,9 +59,6 @@
 }
 .gameCorner {
   grid-area: 1 / 5 / 2 / 6;
-  width: 20vw;
-  height: 20vw;
-  border: 1px solid black;
 }
 
 .gameWordsFound {
@@ -68,7 +69,6 @@
   overflow: auto;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
 }
 
 .word {
