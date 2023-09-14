@@ -50,7 +50,7 @@
 
 .target {
   grid-area: 1 / 1 / 2 / 5;
-  letter-spacing: 3rem;
+  letter-spacing: 2rem;
   font-size: 3rem;
   align-self: center;
 
@@ -82,8 +82,9 @@
 
 .gameGuess {
   grid-area: 5 / 1 / 6 / 4;
-  display: flex;
+  /* display: flex;
   justify-content: center;
+   */
 }
 
 .gameGuess input {
