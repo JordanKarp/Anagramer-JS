@@ -149,9 +149,9 @@ function Game() {
     <div className='gameBoard'>
       <TargetHeader target={target.toUpperCase()} />
       <GameCorner initialTime={time} gameOver={gameOver} wordsFound={wordsFound.length.toString()} totalWords={anagrams.length} />
-      <GameWordsFound anagrams={anagrams} wordsFound={wordsFound} userVocab={[...user.vocab]} />
-      <GameLogs logs={logs} />
       <GameGuess guessWord={guessWord} guessRef={guessRef} />
+      <GameLogs logs={logs} />
+      <GameWordsFound anagrams={anagrams} wordsFound={wordsFound} userVocab={[...user.vocab]} />
     </div>
      )
 }
