@@ -2,17 +2,15 @@
 import { useContext, useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import GameContext from "../context/Context.jsx";
-import Timer from  "../components/Timer.jsx"
 import TargetHeader from  "../components/TargetHeader.jsx"
 import '../App.css'
 import getFreebieWord from '../data/getFreebieWord.js';
 import compareArrays from '../utils/compareArrays.js';
-import GuessStatsBoard from '../components/GuessStatsBoard.jsx';
-import UserCorner from '../components/UserCorner.jsx';
 import GameLogs from '../components/GameLogs.jsx';
 import GameGuess from '../components/GameGuess.jsx';
 import GameWordsFound from '../components/GameWordsFound.jsx';
-import GameProgressBar from '../components/GameProgressBar.jsx';
+import GameCorner from '../components/GameCorner.jsx';
+
 
 function Game() {
   const guessRef = useRef()
@@ -100,6 +98,7 @@ function Game() {
 
   const gameOver = () => {
     let gameMsg = ''
+    console.log(wordsFound.length/anagrams.length)
     if (user.roundWin >= wordsFound.length/anagrams.length) {
       gameMsg = 'You win!'
     } else{
@@ -150,10 +149,6 @@ function Game() {
     <>
       <TargetHeader target={target.toUpperCase()} />
       <GameCorner initialTime={time} gameOver={gameOver} wordsFound={wordsFound.length.toString()} totalWords={anagrams.length} />
-      {/* // <UserCorner user={user} /> */}
-      {/* <Timer initialTime={time} gameOver={gameOver} /> */}
-      {/* <GuessStatsBoard  guessStats={guessStats} /> */}
-      {/* <GameProgressBar value={wordsFound.length.toString()} max={anagrams.length} /> */}
       <GameWordsFound anagrams={anagrams} wordsFound={wordsFound} userVocab={[...user.vocab]} />
       <GameLogs logs={logs} />
       <GameGuess guessWord={guessWord} guessRef={guessRef} />
