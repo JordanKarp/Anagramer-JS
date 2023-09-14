@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom"
 import GameContext from "../context/Context.jsx";
-import { calcMult, calcTotalMult } from "../data/mutlipliers.js";
-import { getTime, formatTime } from "../data/time.js";
+import { calcTotalMult } from "../data/mutlipliers.js";
+import { getTime } from "../data/time.js";
 import '../App.css'
 import shuffleStr from '../utils/shuffleStr.js';
 import choice from '../utils/choice.js';
