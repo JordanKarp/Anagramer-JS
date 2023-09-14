@@ -98,14 +98,15 @@ function Game() {
 
   const gameOver = () => {
     let gameMsg = ''
-    console.log(wordsFound.length/anagrams.length)
-    console.log(user.roundWin)
+    let gameMult = 0
     if (user.roundWin <= ((wordsFound.length/anagrams.length)*100)) {
       gameMsg = 'You win!'
+      gameMult = mult
     } else{
       gameMsg = "You lose."
+      gameMult = 0
     }
-    navigate("/results", {state: {wordsFound, mult:0, guessStats, msg:gameMsg}})
+    navigate("/results", {state: {wordsFound, mult:gameMult, guessStats, msg:gameMsg}})
   }
 
 
