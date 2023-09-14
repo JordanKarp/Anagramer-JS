@@ -100,7 +100,7 @@ function Game() {
     let gameMsg = ''
     console.log(wordsFound.length/anagrams.length)
     console.log(user.roundWin)
-    if (user.roundWin <= wordsFound.length/anagrams.length) {
+    if (user.roundWin <= ((wordsFound.length/anagrams.length)*100)) {
       gameMsg = 'You win!'
     } else{
       gameMsg = "You lose."
