@@ -10,6 +10,8 @@
   padding: 2rem;
   text-align: center;
 }
+
+/* WELCOME PAGE */
 .title {
   font-size: 4rem;
 }
@@ -19,21 +21,9 @@
   flex-direction: column;
 }
 
-.gameBoard {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  }
-  
-  .gameCorner { grid-area: 1 / 5 / 2 / 6; }
-  .target { grid-area: 1 / 1 / 2 / 5; }
-  .gameWordsFound { grid-area: 2 / 1 / 5 / 6; }
-  .gameGuess { grid-area: 5 / 1 / 6 / 4; }
-  .gameLog { grid-area: 5 / 4 / 6 / 6; }
 
-/* .userCorner {
+/* GAME SETUP PAGE */
+.userCorner {
   position: absolute;
   font-size: .75rem;
   line-height: 25%;
@@ -43,22 +33,30 @@
   padding: 0 5px;
   border: solid 1px black;
   background-color: aliceblue;
-} */
+}
+
+/* GAME PLAY PAGE */
+.gameBoard {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  }
 
 .target {
-  letter-spacing: 20px;
+  grid-area: 1 / 1 / 2 / 5;
+  letter-spacing: 3rem;
+  font-size: 3rem;
 }
-/* .guessStatsBoard {
-  position: absolute;
-  font-size: .75rem;
-  line-height: 25%;
-  text-align: left;
-  left: 5px;
-  top: 5px;
-  padding: 0 5px;
-  background-color: aliceblue;
-  border: solid 1px black;
-} */
+.gameCorner {
+  grid-area: 1 / 5 / 2 / 6;
+  width: 20vw;
+  height: 20vw;
+  border: 1px solid black;
+}
 
 .progressBar {
   background-color: whiteSmoke;
@@ -78,12 +76,12 @@
 }
 
 .gameWordsFound {
+  grid-area: 2 / 1 / 5 / 6;
   list-style: none;
   display: flex;
   flex-wrap:wrap;
   overflow: auto;
   justify-content: space-between;
-
 }
 
 .word {
@@ -92,6 +90,7 @@
 }
 
 .gameGuess {
+  grid-area: 5 / 1 / 6 / 4;
   display: flex;
   justify-content: center;
 }
@@ -104,6 +103,7 @@
 
 
 .gameLog {
+  grid-area: 5 / 4 / 6 / 6;
   list-style: none;
 }
 
