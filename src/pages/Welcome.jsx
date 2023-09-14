@@ -30,7 +30,7 @@ function Welcome() {
 
   return (
     <>
-      <h1 className="title">Anagrammer</h1>
+      <h1 className="title">Anagramer</h1>
       <div className="signIn">
         <form onSubmit={proceed} autoComplete="off">
           <div>
