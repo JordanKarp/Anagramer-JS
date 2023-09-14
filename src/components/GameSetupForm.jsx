@@ -1,16 +1,5 @@
-// import { calcMult, calcTotalMult } from "../data/mutlipliers"
-// import { formatTime } from "../data/time"
-// import formatNumber from "../utils/formatNumber"
-
-import { useEffect } from "react"
-
 
 const GameSetupForm = ({user, setSize, setWinType, setTimeType}) => {
-    useEffect(()=> {
-        console.log(user.roundSize)
-        console.log(user.roundTime)
-        console.log(user.roundWin)
-    }, [user])
     return (
         <form>
             <label>

@@ -83,7 +83,6 @@ function GameSetup() {
       'roundTime': timeType,
       'roundWin': winType,
     })
-    console.log(user)
     navigate('/play', {state: {anagrams, target, time, mult}})
   }
 

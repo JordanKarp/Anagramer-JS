@@ -13,4 +13,3 @@ const getWords = async () => {
       })
   };
 
-console.log(getWords())

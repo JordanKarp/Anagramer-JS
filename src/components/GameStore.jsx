@@ -20,10 +20,8 @@ const GameStore = ({user, setUser}) => {
               })
               setStoreMsg("Freebie Purchased")
         }
-        // console.log(freebiePrice)
-
-
     }
+    
     return (
         <>
             <table>

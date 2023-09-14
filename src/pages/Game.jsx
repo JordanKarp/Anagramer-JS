@@ -98,15 +98,12 @@ function Game() {
 
   const gameOver = () => {
     let gameMsg = ''
-    console.log(wordsFound.length/anagrams.length)
-    if (user.roundWin >= wordsFound.length/anagrams.length) {
+    if (user.roundWin <= wordsFound.length/anagrams.length) {
       gameMsg = 'You win!'
     } else{
       gameMsg = "You lose."
     }
     navigate("/results", {state: {wordsFound, mult:0, guessStats, msg:gameMsg}})
-
-    // console.log('Game Over')
   }
 
 
@@ -146,13 +143,13 @@ function Game() {
   }
 
   return (
-    <>
+    <div className='gameBoard'>
       <TargetHeader target={target.toUpperCase()} />
       <GameCorner initialTime={time} gameOver={gameOver} wordsFound={wordsFound.length.toString()} totalWords={anagrams.length} />
       <GameWordsFound anagrams={anagrams} wordsFound={wordsFound} userVocab={[...user.vocab]} />
       <GameLogs logs={logs} />
       <GameGuess guessWord={guessWord} guessRef={guessRef} />
-    </>
+    </div>
      )
 }
 

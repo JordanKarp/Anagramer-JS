@@ -27,8 +27,8 @@ const Timer = ({ initialTime, gameOver } ) => {
     return (
         <div>
         { minutes === 0 && seconds === 0
-            ? <h2>Time Up!</h2>
-            : <h2>Time Remaining: {minutes}:{seconds < 10 ?  `0${seconds}` : seconds}</h2>
+            ? <p>Time Up!</p>
+            : <p>Time: {minutes}:{seconds < 10 ?  `0${seconds}` : seconds}</p>
         }
         </div>
     )
