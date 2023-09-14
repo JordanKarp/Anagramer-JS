@@ -67,7 +67,7 @@ function GameResults() {
       case 'You lose.':
         setUser({
           ...user,
-          'vocab': new Set(),
+          'vocab': updatedVocab,
           'points': 0,
           'guessStats': updatedStats,
         })
@@ -82,11 +82,10 @@ function GameResults() {
       <h1>Game Results</h1>
       <UserCorner user={user} />
       <h1>{msg}</h1>
-      {/* <GuessStatsBoard guessStats={stats}/> */}
       <p>You learned {wordsFound && wordsFound.join(', ').toUpperCase()}</p>
       <GameResultsTable wordsFound={wordsFound} mult={mult} points={points} />
       <button onClick={() => navigate('/setup')} autoFocus>Proceed!</button>
-      <p>{[...user.vocab].sort().join(', ')}</p>
+      {/* <p>{[...user.vocab].sort().join(', ')}</p> */}
 
 
     </>
