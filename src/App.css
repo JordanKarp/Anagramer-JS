@@ -34,9 +34,11 @@
 
 /* GAME PLAY PAGE */
 .gameBoard {
-  height: 97vh;
-  width: 97vw;
+  height: 100vh;
+  width: 100vw;
   display: grid;
+  overflow-x:none;
+  overflow-y: auto;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: .5rem;
@@ -52,13 +54,13 @@
 }
 
 .target {
-  grid-area: 1 / 1 / 2 / 5;
+  grid-area: 1 / 1 / 2 / 4;
   font-size: 3rem;
   align-self: center;
 
 }
 .gameCorner {
-  grid-area: 1 / 5 / 2 / 6;
+  grid-area: 1 / 4 / 2 / 6;
 }
 
 .gameWordsFound {
@@ -79,7 +81,7 @@
 }
 
 .gameGuess {
-  grid-area: 2 / 1 / 3 / 4;
+  grid-area: 2 / 1 / 3 / 6;
   display: flex;
   justify-content: center;
   align-items: center;
