@@ -4,7 +4,7 @@ const GameSetupForm = ({user, setSize, setWinType, setTimeType}) => {
         <form>
             <label>
                 Target Word Size:
-                <input type="number" name="size" min="3" max="7" onChange={e => setSize(e.target.value)} defaultValue={user.roundSize} />
+                <input type="number" pattern="[0-9]*" name="size" min="3" max="7" onChange={e => setSize(e.target.value)} defaultValue={user.roundSize} />
             </label>
             <br/>
             <label>
