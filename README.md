@@ -13,6 +13,7 @@
 3. Play:
     - Type words and hit enter to guess
     - Type 'f' in order to use one of your freebies.
+    - Try to guess all the words before the time runs out.
 4. Results:
     - Store your points and your vocabulary
     - Any words 'learned' will go toward any future rounds.
