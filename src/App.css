@@ -98,6 +98,12 @@
 .gameLog {
   grid-area: 5 / 4 / 6 / 6;
   list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+.gameLog  li {
+  grid-area: 5 / 4 / 6 / 6;
+  list-style: none;
 }
 
 table {
