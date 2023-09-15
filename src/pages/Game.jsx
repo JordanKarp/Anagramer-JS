@@ -35,7 +35,6 @@ function Game() {
 
   const activateFreebie = () => {
     if (user.freebies >= 1 ) {
-      // TODO: add Freebies
       let freebieWord = getFreebieWord(anagrams, wordsFound)
       setWordsFound((words)=> words.concat(freebieWord))
       setUser((prev) => {return ({...prev,
@@ -49,6 +48,7 @@ function Game() {
     } else {
       logMessage = "No Freebies available."
     }
+    return logMessage
   }
 
   const guessWord = (e) => {
@@ -64,7 +64,7 @@ function Game() {
     guessRef.current.value = ''
 
     // Already Guessed
-    if ( wordsFound.includes(guess)) {
+           if ( wordsFound.includes(guess)) {
       logMessage = `${guess.toUpperCase()} is already in your vocab.`
       setGuessStats((prev) => {return ({...prev,
         'total': prev.total + 1,
@@ -83,8 +83,7 @@ function Game() {
 
     // Freebie
     } else if (guess === 'f') {
-      activateFreebie()
-
+      logmessage = activateFreebie()
     // Incorrect Guess
     } else {
       logMessage = `${guess.toUpperCase()} is incorrect.`
