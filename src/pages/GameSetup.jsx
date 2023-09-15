@@ -18,37 +18,12 @@ import data from "../../data/wordListDict-short.json"
 
 function GameSetup() {
   const [user, setUser] = useContext(GameContext)
-  const [allWords, setAllWords] = useState()
+  const [allWords, setAllWords] = useState(null)
   const [size, setSize] = useState(3)
   const [timeType, setTimeType] = useState('Normal')
   const [time, setTime] = useState()
   const [winType, setWinType] = useState('100')
   const navigate = useNavigate()
-  // const [data, errorStatus] = useFetch("../../data/wordListDict-short.json")
-
-  // const getWords = async () => {
-  //   await fetch("../../data/wordListDict-short.json", {
-  //     headers : {
-  //       'Content-Type': 'application/json',
-  //       'Accept': 'application/json'
-  //      }})
-  //     .then((response) => {
-  //       if (response.ok) { 
-  //         return response.json();
-  //       }
-  //       return Promise.reject(response); 
-  //     })
-  //     .then((result) => { 
-  //       setAllWords(result)
-  //     })
-  //     .catch((error) => {
-  //       console.log('Something went wrong.', error); 
-  //     });
-  // };
-
-  const getWords = () => {
-    setAllWords(data)
-  }
 
   const getTarget = (words) => {
     const allWordsList = Object.values(words).flat(1)
@@ -89,7 +64,7 @@ function GameSetup() {
 
 
   useEffect(() => {
-    getWords()
+    setAllWords(data)()
   }, [data])
 
   useEffect(() => {
