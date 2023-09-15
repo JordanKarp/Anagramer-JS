@@ -62,7 +62,7 @@ function GameSetup() {
   }
 
   useEffect(() => {
-    setAllWords(data)()
+    setAllWords(data)
   }, [data])
 
   useEffect(() => {
