@@ -69,7 +69,7 @@ function GameSetup() {
     setSize(size)
     setTimeType(timeType)
     setWinType(winType)
-  }, [size, timeType, winType])
+  }, [user])
 
 
   useEffect(() => {
