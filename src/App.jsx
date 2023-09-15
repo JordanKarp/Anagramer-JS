@@ -19,7 +19,7 @@ function App() {
             'repeat': 0,
             'freebies': 0,
         },
-        'roundSize': '4',
+        'roundSize': '3',
         'roundTime': 'Normal',
         'roundWin': '100',
     })

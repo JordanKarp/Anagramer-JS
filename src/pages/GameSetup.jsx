@@ -19,10 +19,10 @@ import data from "../../data/wordListDict-short.json"
 function GameSetup() {
   const [user, setUser] = useContext(GameContext)
   const [allWords, setAllWords] = useState(null)
-  const [size, setSize] = useState(3)
-  const [timeType, setTimeType] = useState('Normal')
+  const [size, setSize] = useState(null)
+  const [timeType, setTimeType] = useState(null)
   const [time, setTime] = useState()
-  const [winType, setWinType] = useState('100')
+  const [winType, setWinType] = useState(null)
   const navigate = useNavigate()
 
   const getTarget = (words) => {
@@ -60,8 +60,6 @@ function GameSetup() {
     })
     navigate('/play', {state: {anagrams, target, time, mult}})
   }
-
-
 
   useEffect(() => {
     setAllWords(data)()
