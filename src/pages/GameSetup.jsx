@@ -63,10 +63,14 @@ function GameSetup() {
 
   useEffect(() => {
     setAllWords(data)
+  }, [data])
+
+  useEffect(() => {
     setSize(user.size)
     setTimeType(user.timeType)
-    setwinType(user.winType)
-  }, [data])
+    setWinType(user.winType)
+  }, [size, timeType, winType])
+
 
   useEffect(() => {
     setTime(getTime(timeType, size))
