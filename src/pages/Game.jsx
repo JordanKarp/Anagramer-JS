@@ -33,6 +33,24 @@ function Game() {
   const navigate = useNavigate('')
   const location = useLocation()
 
+  const activateFreebie = () => {
+    if (user.freebies >= 1 ) {
+      // TODO: add Freebies
+      let freebieWord = getFreebieWord(anagrams, wordsFound)
+      setWordsFound((words)=> words.concat(freebieWord))
+      setUser((prev) => {return ({...prev,
+        'freebies': prev.freebies - 1
+      })})
+      logMessage = 'Freebie used.'
+      setGuessStats((prev) => {return ({...prev,
+        'total': prev.total + 1,
+        'freebies': prev.freebies + 1,
+      })})
+    } else {
+      logMessage = "No Freebies available."
+    }
+  }
+
   const guessWord = (e) => {
     e.preventDefault()
     let guessObj = {guess:guessRef.current.value}
@@ -41,13 +59,11 @@ function Game() {
     if (guess === '' || anagrams === []) {
       return
     }
-    // let userVocab = [...user.vocab]
 
     let logMessage = ''
     guessRef.current.value = ''
 
     // Already Guessed
-    // if (userVocab.includes(guess) || wordsFound.includes(guess)) {
     if ( wordsFound.includes(guess)) {
       logMessage = `${guess.toUpperCase()} is already in your vocab.`
       setGuessStats((prev) => {return ({...prev,
@@ -67,30 +83,15 @@ function Game() {
 
     // Freebie
     } else if (guess === 'f') {
-      if (user.freebies >= 1 ) {
-        // TODO: add Freebies
-        let freebieWord = getFreebieWord(anagrams, wordsFound)
-        setWordsFound((words)=> words.concat(freebieWord))
-        setUser((prev) => {return ({...prev,
-          'freebies': prev.freebies - 1
-        })})
-        logMessage = 'Freebie used.'
-        setGuessStats((prev) => {return ({...prev,
-          'total': prev.total + 1,
-          'freebies': prev.freebies + 1,
-        })})
-      } else {
-        logMessage = "No Freebies available."
-      }
-
+      activateFreebie()
 
     // Incorrect Guess
-      } else {
-        logMessage = `${guess.toUpperCase()} is incorrect.`
-        setGuessStats((prev) => {return ({...prev,
-          'total': prev.total + 1,
-          'incorrect': prev.incorrect + 1,
-        })})
+    } else {
+      logMessage = `${guess.toUpperCase()} is incorrect.`
+      setGuessStats((prev) => {return ({...prev,
+        'total': prev.total + 1,
+        'incorrect': prev.incorrect + 1,
+      })})
 
     }
     setLogs(currentLog => [logMessage, ...currentLog])

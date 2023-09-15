@@ -1,8 +1,8 @@
 # Anagramer
 
-## Given a set of letters, find every English word using any portions of those letters.
+## Given a set of letters, find every English word using any portions of those letters
 
-## How to Play 
+## How to Play
 
 1. Login / Register
 2. Choose settings for the next game round:
