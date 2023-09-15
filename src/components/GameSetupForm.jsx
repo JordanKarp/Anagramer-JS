@@ -2,9 +2,10 @@
 const GameSetupForm = ({user, setSize, setWinType, setTimeType}) => {
     if (!user) {
         return (
-            <p>User not loaded</p>
+            <p>User not Loaded</p>
         )
     }
+
     return (
         <form>
             <label>
