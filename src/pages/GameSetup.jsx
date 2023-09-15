@@ -66,9 +66,9 @@ function GameSetup() {
   }, [data])
 
   useEffect(() => {
-    setSize(user.size)
-    setTimeType(user.timeType)
-    setWinType(user.winType)
+    setSize(size)
+    setTimeType(timeType)
+    setWinType(winType)
   }, [size, timeType, winType])
 
 
