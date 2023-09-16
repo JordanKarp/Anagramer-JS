@@ -34,6 +34,7 @@ function Game() {
   const location = useLocation()
 
   const activateFreebie = () => {
+    let logMessage=''
     if (user.freebies >= 1 ) {
       let freebieWord = getFreebieWord(anagrams, wordsFound)
       setWordsFound((words)=> words.concat(freebieWord))
