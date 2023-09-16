@@ -73,7 +73,6 @@ function Game() {
 
      // Correct Guess
     } else if (anagrams.includes(guess)) {
-      // addToVocab(guess)
       setWordsFound((words)=> words.concat(guess))
       logMessage = `${guess.toUpperCase()} has been added.`
       setGuessStats((prev) => {return ({...prev,
@@ -84,6 +83,8 @@ function Game() {
     // Freebie
     } else if (guess === 'f') {
       logMessage = activateFreebie()
+      console.log(logMessage)
+
     // Incorrect Guess
     } else {
       logMessage = `${guess.toUpperCase()} is incorrect.`
