@@ -83,7 +83,7 @@ function Game() {
 
     // Freebie
     } else if (guess === 'f') {
-      logmessage = activateFreebie()
+      logMessage = activateFreebie()
     // Incorrect Guess
     } else {
       logMessage = `${guess.toUpperCase()} is incorrect.`
