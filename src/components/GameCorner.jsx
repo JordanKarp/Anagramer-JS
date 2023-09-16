@@ -2,7 +2,7 @@ import formatNumber from "../utils/formatNumber"
 import GameProgressBar from "./GameProgressBar"
 import Timer from "./Timer"
 
-const GameCorner = ({initialTime, gameOver, wordsFound, totalWords, winType}) => {
+const GameCorner = ({initialTime, gameOver, wordsFound, totalWords, winType,}) => {
 
     return (
         <div className='gameCorner'>

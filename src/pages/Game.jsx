@@ -34,14 +34,14 @@ function Game() {
   const location = useLocation()
 
   const activateFreebie = () => {
-    let logMessage=''
+    let logMessage = ''
     if (user.freebies >= 1 ) {
       let freebieWord = getFreebieWord(anagrams, wordsFound)
       setWordsFound((words)=> words.concat(freebieWord))
       setUser((prev) => {return ({...prev,
         'freebies': prev.freebies - 1
       })})
-      logMessage = 'Freebie used.'
+      logMessage = `Freebie used. Found ${freebieWord}.`
       setGuessStats((prev) => {return ({...prev,
         'total': prev.total + 1,
         'freebies': prev.freebies + 1,
