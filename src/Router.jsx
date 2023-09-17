@@ -23,6 +23,10 @@ const Router = () => {
           path: "/results",
           element: <GameResults />
         },
+        {
+          path: "/*",
+          element: <ErrorPage />
+        },
     ]);
 
     return <RouterProvider router={router} />
