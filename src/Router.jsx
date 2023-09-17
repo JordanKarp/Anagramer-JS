@@ -10,7 +10,6 @@ const Router = () => {
         {
           path: "/",
           element: <Welcome />,
-          errorElement: <ErrorPage />
         },
         {
           path: "/setup",
