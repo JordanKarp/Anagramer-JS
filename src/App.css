@@ -83,7 +83,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .gameGuess input {
@@ -93,6 +92,10 @@
   align-self: center;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+}
 
 .gameLog {
   grid-area: 2 / 4 / 3 / 6;
