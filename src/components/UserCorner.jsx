@@ -13,7 +13,7 @@ const UserCorner = ({user}) => {
             <p><b>{userName}</b></p>
             <p>Points: {formatNumber(points)} </p>
             <p>Freebies: {freebies} </p>
-            <GuessStatsBoard />
+            <GuessStatsBoard guessStats={guessStats} />
         </div>
     )
 }
