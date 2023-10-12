@@ -1,4 +1,5 @@
 import formatNumber from "../utils/formatNumber"
+import GuessStatsBoard from "./GuessStatsBoard"
 
 const UserCorner = ({user}) => {
     const {userName, points, freebies, guessStats} = user
@@ -12,6 +13,7 @@ const UserCorner = ({user}) => {
             <p><b>{userName}</b></p>
             <p>Points: {formatNumber(points)} </p>
             <p>Freebies: {freebies} </p>
+            <GuessStatsBoard />
         </div>
     )
 }

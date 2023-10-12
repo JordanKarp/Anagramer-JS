@@ -24,6 +24,10 @@ const Router = () => {
           element: <GameResults />
         },
         {
+          path: "/user",
+          element: <UserPage />
+        },
+        {
           path: "/*",
           element: <ErrorPage />
         },
