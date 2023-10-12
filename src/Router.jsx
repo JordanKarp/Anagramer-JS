@@ -4,6 +4,7 @@ import GameSetup from './pages/GameSetup.jsx'
 import Game from './pages/Game.jsx'
 import GameResults from './pages/GameResults.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
+import UserPage from './pages/UserPage.jsx'
 
 const Router = () => {
     const router = createBrowserRouter([
