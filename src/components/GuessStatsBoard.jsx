@@ -1,8 +1,8 @@
 import formatNumber from "../utils/formatNumber"
 
 const GuessStatsBoard = ({guessStats}) => {
-    let strictAcc = formatNumber(guessStats.correct / guessStats.total) || 0
-    let acc = formatNumber(guessStats.correct / (guessStats.total - guessStats.repeat - guessStats.freebies)) || 0
+    let strictAcc = formatNumber(100 * guessStats.correct / guessStats.total) || 0
+    let acc = formatNumber(100 * guessStats.correct / (guessStats.total - guessStats.repeat - guessStats.freebies)) || 0
 
     return (
         <div className='guessStatsBoard'>
@@ -11,7 +11,7 @@ const GuessStatsBoard = ({guessStats}) => {
             <p>Incorrect: {guessStats.incorrect}</p>
             <p>Repeat: {guessStats.repeat}</p>
             <p>Freebie: {guessStats.freebies}</p>
-            <p>Accuracy: {acc* 100}% ({strictAcc*100}%)</p>
+            <p>Accuracy: {acc}% ({strictAcc}%)</p>
         </div>
     )
 }
