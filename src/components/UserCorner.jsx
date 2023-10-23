@@ -10,8 +10,11 @@ const UserCorner = ({user}) => {
     const sizes = {}
     const vocabArray = [...vocab];
     vocabArray.forEach((word) => {
-        sizes[word.length] += 1;
-        console.log(sizes)
+        if (sizes[word.length]){
+            sizes[word.length] += 1;
+        } else {
+            sizes[word.length] = 1;
+        }
     })
 
     return (
@@ -20,6 +23,7 @@ const UserCorner = ({user}) => {
             <p>Points: {formatNumber(points)} </p>
             <p>Freebies: {freebies} </p>
             <p>2: {sizes[2]}</p>
+            <p>2: {sizes[3]}</p>
             <GuessStatsBoard guessStats={guessStats} />
         </div>
     )
