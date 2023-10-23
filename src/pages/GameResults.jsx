@@ -79,7 +79,6 @@ function GameResults() {
 
   return (
     <>
-      <h1>Game Results</h1>
       <UserCorner user={user} />
       <h1>{msg}</h1>
       <p>You learned {wordsFound && wordsFound.join(', ').toUpperCase()}</p>
