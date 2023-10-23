@@ -11,6 +11,7 @@ const UserCorner = ({user}) => {
     const vocabArray = [...vocab];
     vocabArray.forEach((word) => {
         sizes[word.length] += 1;
+        console.log(sizes)
     })
 
     return (
