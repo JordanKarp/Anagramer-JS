@@ -18,11 +18,10 @@ function UserPage() {
       console.log(word)
       console.log(vocabNumbers[word.length])
 
-      if (vocabNumbers[word.length]) {
-        vocabNumbers[word.length]++
-      } else {
-        console.log(word.length)
+      if (vocabNumbers[word.length]=== undefined) {
         vocabNumbers[word.length] = 1
+      } else {
+        vocabNumbers[word.length] ++
       }
     })
   }, [user])

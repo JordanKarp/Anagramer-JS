@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import formatNumber from "../utils/formatNumber"
-import GuessStatsBoard from "./GuessStatsBoard"
+
 
 const UserCorner = ({user}) => {
     const {userName, points, freebies, guessStats, vocab} = user
