@@ -54,4 +54,4 @@ const GameOptions = ({user}) => {
     )
 }
 
-export default GameSetupTable
+export default GameOptions

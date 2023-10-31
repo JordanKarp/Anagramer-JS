@@ -85,7 +85,7 @@ function GameSetup() {
       <hr/>
       <GameStore user={user} setUser={setUser}/>
       <hr/>
-      {/* <GameSetupTable size={size} timeType={timeType} winType={winType} time={time} freebies={user.freebies} /> */}
+      <GameSetupTable size={size} timeType={timeType} winType={winType} time={time} freebies={user.freebies} />
       <button onClick={proceed} autoFocus>Play!</button>
     </>
     )
