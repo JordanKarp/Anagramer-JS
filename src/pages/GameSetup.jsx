@@ -10,6 +10,7 @@ import getCombinations from '../utils/getCombinations.js';
 import UserCorner from '../components/UserCorner.jsx';
 import formatNumber from '../utils/formatNumber.js';
 import GameSetupTable from '../components/GameSetupTable.jsx';
+import GameOptions from '../components/GameOptions.jsx';
 import GameSetupForm from '../components/GameSetupForm.jsx';
 import GameStore from '../components/GameStore.jsx';
 import useFetch from '../hooks/useFetch.jsx';
