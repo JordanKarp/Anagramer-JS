@@ -1,20 +1,22 @@
+import { useNavigate } from "react-router-dom"
 import formatNumber from "../utils/formatNumber"
 import GuessStatsBoard from "./GuessStatsBoard"
 
 const UserCorner = ({user}) => {
     const {userName, points, freebies, guessStats, vocab} = user
+    const navigate = useNavigate()
 
     if (user === undefined) {
       return
     } 
 
     return (
-        <div className='userCorner'>
+        <button className='userCorner' onClick={() => navigate('/user')}>
             <p><b>{userName}</b></p>
             <p>Points: {formatNumber(points)} </p>
             <p>Freebies: {freebies} </p>
-            <GuessStatsBoard guessStats={guessStats} />
-        </div>
+    
+        </button>
     )
 }
 
