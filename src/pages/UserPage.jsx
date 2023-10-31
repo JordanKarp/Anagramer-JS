@@ -14,7 +14,7 @@ function UserPage() {
 
   useEffect(() => {
     setVocabNumbers([...user.vocab].reduce((acc,v)=>{
-      acc[v.length] = acc[v.length] ? [...acc[v.length], v] : [v];
+      acc[v.length] = acc[v.length] ? acc[v.length]+ 1 : 1;
       return acc;
     },{}))
 
