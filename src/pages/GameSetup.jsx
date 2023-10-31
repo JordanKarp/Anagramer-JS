@@ -9,7 +9,6 @@ import choice from '../utils/choice.js';
 import getCombinations from '../utils/getCombinations.js';
 import UserCorner from '../components/UserCorner.jsx';
 import GameSetupTable from '../components/GameSetupTable.jsx';
-import GameOptions from '../components/GameOptions.jsx';
 import GameSetupForm from '../components/GameSetupForm.jsx';
 import GameStore from '../components/GameStore.jsx';
 import useFetch from '../hooks/useFetch.jsx';
@@ -80,7 +79,6 @@ function GameSetup() {
     <>
       <h1>Game Setup</h1>
       <UserCorner user={user}/>
-      <GameOptions user={user}/>
       <GameSetupForm user={user} size={size} setSize={setSize} setWinType={setWinType} setTimeType={setTimeType} />
       <hr/>
       <GameStore user={user} setUser={setUser}/>
