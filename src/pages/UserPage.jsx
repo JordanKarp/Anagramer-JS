@@ -5,6 +5,7 @@ import GuessStatsBoard from '../components/GuessStatsBoard'
 import data from "../../data/wordListDict-short.json"
 import formatPercent from '../utils/formatPercent'
 import formatNumber from '../utils/formatNumber'
+import GameProgressBar from '../components/GameProgressBar'
 
 
 
