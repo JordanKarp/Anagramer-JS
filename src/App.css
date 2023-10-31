@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
   /* border: 1px solid red; */
 
 }
@@ -24,10 +25,7 @@
 
 /* GAME SETUP PAGE */
 .userCorner {
-  position: relative;
   text-align: right;
-  right: 5px;
-  top: 5px;
   padding: .5rem;
   border: solid 1px black;
   background-color: lightgrey;
@@ -35,8 +33,6 @@
 
 /* GAME PLAY PAGE */
 .gameBoard {
-  height: 96vh;
-  width: 96vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -45,7 +41,7 @@
   background-color: aliceblue;
   border-radius: 10px;
   margin: auto auto;
-  padding: 0.5rem;
+  padding: 0.2rem;
   }
 
 .gameBoard > * {
