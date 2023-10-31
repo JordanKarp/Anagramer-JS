@@ -41,6 +41,7 @@ function UserPage() {
       <h3>Words found:</h3>
       <ul>
         <li>2 Letter Words: {formatPercent(vocabNumbers[2] / dictNumbers[2])}% ({vocabNumbers[2] || 0} / {dictNumbers[2]})</li>
+        <GameProgressBar value={vocabNumbers[2]} max={dictNumbers[2]} />
         <li>3 Letter Words: {formatPercent(vocabNumbers[3] / dictNumbers[3])}% ({vocabNumbers[3] || 0} / {dictNumbers[3]})</li>
         <li>4 Letter Words: {formatPercent(vocabNumbers[4] / dictNumbers[4])}% ({vocabNumbers[4] || 0} / {dictNumbers[4]})</li>
         <li>5 Letter Words: {formatPercent(vocabNumbers[5] / dictNumbers[5])}% ({vocabNumbers[5] || 0} / {dictNumbers[5]})</li>
