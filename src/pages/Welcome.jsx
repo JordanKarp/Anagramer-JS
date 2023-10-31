@@ -42,14 +42,11 @@ function Welcome() {
             <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='*****'/>
            </div>
            <div>
-            <button type='submit' name='signIn' value="signIn">Sign In</button>
-            <button type='submit' name='register' value="register">Register</button>
+            <button type='submit' name='signIn' value="signIn" formAction="/login">Sign In</button>
+            <button type='submit' name='register' value="register"formAction="/register">Register</button>
            </div>
         </form>
         {msg && <p className="loginMsg">{msg}</p>}
-        <hr/>
-        <p>WARNING: The above sign in form does not currently work. </p>
-        <p>But you can still create a username for this game session using either button.</p>
       </div>
     </>
   )

@@ -2,11 +2,12 @@
 import { useContext } from 'react'
 import '../App.css'
 import GameContext from '../context/Context'
+import GuessStatsBoard from '../components/GuessStatsBoard'
 
 
 function UserPage() {
   const [user, setUser] = useContext(GameContext)
-  
+
   if (user === undefined) {
     return
   } 
