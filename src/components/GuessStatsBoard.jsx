@@ -30,15 +30,13 @@ const GuessStatsBoard = ({guessStats}) => {
                 </tr>
                 <tr>
                     <td>Accuracy:</td>
-                    <td>{acc}% ({strictAcc}%)</td>
+                    <td>{acc}%</td>
+                </tr>
+                <tr>
+                    <td>Strict Accuracy:</td>
+                    <td>{strictAcc}%</td>
                 </tr>
             </table>
-            {/* <p>Total: {guessStats.total}</p>
-            <p>Correct: {guessStats.correct}</p>
-            <p>Incorrect: {guessStats.incorrect}</p>
-            <p>Repeat: {guessStats.repeat}</p>
-            <p>Freebie: {guessStats.freebies}</p>
-            <p>Accuracy: {acc}% ({strictAcc}%)</p> */}
         </div>
     )
 }
