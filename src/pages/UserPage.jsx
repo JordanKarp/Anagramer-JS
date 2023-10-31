@@ -6,13 +6,20 @@ import GuessStatsBoard from '../components/GuessStatsBoard'
 
 function UserPage() {
   const [user, setUser] = useContext(GameContext)
+  const vocabNumbers = {}
 
   if (user === undefined) {
     return
   } 
 
   useEffect(() => {
-    console.log(user.vocab)
+    user.vocab.forEach((word) =>{
+      if (vocabNumbers[word.length]) {
+        vocabNumbers[word.length]++
+      } else {
+        vocabNumbers[word.length] = 1
+      }
+    })
   }, [user])
   
   return (
@@ -24,10 +31,10 @@ function UserPage() {
       <hr/>
       <h3>Words found:</h3>
       <ul>
-        <li>2 Letter Words: __% (XXX found)</li>
-        <li>3 Letter Words: __% (XXX found)</li>
-        <li>4 Letter Words: __% (XXX found)</li>
-        <li>5 Letter Words: __% (XXX found)</li>
+        <li>2 Letter Words: __% ({vocabNumbers[2] || 0} found)</li>
+        <li>3 Letter Words: __% ({vocabNumbers[2] || 0} found)</li>
+        <li>4 Letter Words: __% ({vocabNumbers[2] || 0} found)</li>
+        <li>5 Letter Words: __% ({vocabNumbers[2] || 0} found)</li>
       </ul>
       <hr/>
       <GuessStatsBoard guessStats={user.guessStats} />
