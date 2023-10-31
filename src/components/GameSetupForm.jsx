@@ -4,8 +4,6 @@ const GameSetupForm = ({user, setSize, setWinType, setTimeType}) => {
         return (
             <p>User not Loaded</p>
         )
-    } else {
-        console.log(user)
     }
 
     return (

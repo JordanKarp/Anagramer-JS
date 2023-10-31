@@ -9,6 +9,7 @@ const GameCorner = ({initialTime, gameOver, wordsFound, totalWords, winType,}) =
             <Timer initialTime={initialTime} gameOver={gameOver}/>
             <p>{wordsFound} / {totalWords} = {formatNumber(wordsFound/totalWords)}%</p>
             <p>Need {winType}%</p>
+            <GameProgressBar value={wordsFound} max={totalWords}/>
         </div>
     )
 }
