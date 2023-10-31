@@ -7,7 +7,7 @@
 
 #root {
   max-width: 1280px;
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -24,7 +24,7 @@
 
 /* GAME SETUP PAGE */
 .userCorner {
-  position: absolute;
+  position: relative;
   text-align: right;
   right: 5px;
   top: 5px;
