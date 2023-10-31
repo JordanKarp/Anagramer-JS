@@ -8,7 +8,6 @@ import shuffleStr from '../utils/shuffleStr.js';
 import choice from '../utils/choice.js';
 import getCombinations from '../utils/getCombinations.js';
 import UserCorner from '../components/UserCorner.jsx';
-import formatNumber from '../utils/formatNumber.js';
 import GameSetupTable from '../components/GameSetupTable.jsx';
 import GameOptions from '../components/GameOptions.jsx';
 import GameSetupForm from '../components/GameSetupForm.jsx';
@@ -86,7 +85,7 @@ function GameSetup() {
       <hr/>
       <GameStore user={user} setUser={setUser}/>
       <hr/>
-      <GameSetupTable size={size} timeType={timeType} winType={winType} time={time} freebies={user.freebies} />
+      {/* <GameSetupTable size={size} timeType={timeType} winType={winType} time={time} freebies={user.freebies} /> */}
       <button onClick={proceed} autoFocus>Play!</button>
     </>
     )
