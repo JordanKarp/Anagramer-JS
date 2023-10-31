@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import '../App.css'
 import GameContext from '../context/Context'
 import GuessStatsBoard from '../components/GuessStatsBoard'
@@ -6,24 +6,30 @@ import GuessStatsBoard from '../components/GuessStatsBoard'
 
 function UserPage() {
   const [user, setUser] = useContext(GameContext)
-  const vocabNumbers = {}
+  const [vocabNumbers, setVocabNumbers] = useState({})
 
   if (user === undefined) {
     return
   } 
 
   useEffect(() => {
-    user.vocab.forEach((word) =>{
-      console.log(word.length)
-      console.log(word)
-      console.log(vocabNumbers[word.length])
+    setVocabNumbers([...user.vocab].reduce((acc,v)=>{
+      acc[v.length] = acc[v.length] ? [...acc[v.length], v] : [v];
+      return acc;
+    },{}))
 
-      if (vocabNumbers[word.length]=== undefined) {
-        vocabNumbers[word.length] = 1
-      } else {
-        vocabNumbers[word.length] ++
-      }
-    })
+    // user.vocab.forEach((word) =>{
+    //   console.log(word.length)
+    //   console.log(word)
+    //   console.log(vocabNumbers[word.length])
+
+    //   if (vocabNumbers[word.length]=== undefined) {
+    //     vocabNumbers[word.length] = 1
+    //   } else {
+    //     vocabNumbers[word.length] ++
+    //   }
+    // })
+
   }, [user])
   
   return (
