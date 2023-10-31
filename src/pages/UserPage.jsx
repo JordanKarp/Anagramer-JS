@@ -3,7 +3,7 @@ import '../App.css'
 import GameContext from '../context/Context'
 import GuessStatsBoard from '../components/GuessStatsBoard'
 import data from "../../data/wordListDict-short.json"
-import formatNumber from '../utils/formatNumber'
+import formatPercent from '../utils/formatPercent'
 
 
 
@@ -39,12 +39,12 @@ function UserPage() {
       <hr/>
       <h3>Words found:</h3>
       <ul>
-        <li>2 Letter Words: {formatNumber(vocabNumbers[2] / dictNumbers[2]) || 0}% ({vocabNumbers[2] || 0} / {dictNumbers[2]})</li>
-        <li>3 Letter Words: {formatNumber(vocabNumbers[3] / dictNumbers[3]) || 0}% ({vocabNumbers[3] || 0} / {dictNumbers[3]})</li>
-        <li>4 Letter Words: {formatNumber(vocabNumbers[4] / dictNumbers[4]) || 0}% ({vocabNumbers[4] || 0} / {dictNumbers[4]})</li>
-        <li>5 Letter Words: {formatNumber(vocabNumbers[5] / dictNumbers[5]) || 0}% ({vocabNumbers[5] || 0} / {dictNumbers[5]})</li>
-        <li>6 Letter Words: {formatNumber(vocabNumbers[6] / dictNumbers[6]) || 0}% ({vocabNumbers[6] || 0} / {dictNumbers[6]})</li>
-        <li>7 Letter Words: {formatNumber(vocabNumbers[7] / dictNumbers[7]) || 0}% ({vocabNumbers[7] || 0} / {dictNumbers[7]})</li>
+        <li>2 Letter Words: {formatPercent(vocabNumbers[2] / dictNumbers[2])}% ({vocabNumbers[2] || 0} / {dictNumbers[2]})</li>
+        <li>3 Letter Words: {formatPercent(vocabNumbers[3] / dictNumbers[3])}% ({vocabNumbers[3] || 0} / {dictNumbers[3]})</li>
+        <li>4 Letter Words: {formatPercent(vocabNumbers[4] / dictNumbers[4])}% ({vocabNumbers[4] || 0} / {dictNumbers[4]})</li>
+        <li>5 Letter Words: {formatPercent(vocabNumbers[5] / dictNumbers[5])}% ({vocabNumbers[5] || 0} / {dictNumbers[5]})</li>
+        <li>6 Letter Words: {formatPercent(vocabNumbers[6] / dictNumbers[6])}% ({vocabNumbers[6] || 0} / {dictNumbers[6]})</li>
+        <li>7 Letter Words: {formatPercent(vocabNumbers[7] / dictNumbers[7])}% ({vocabNumbers[7] || 0} / {dictNumbers[7]})</li>
       </ul>
       <hr/>
       <GuessStatsBoard guessStats={user.guessStats} />
