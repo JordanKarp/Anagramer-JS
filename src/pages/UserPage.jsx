@@ -2,10 +2,13 @@ import { useContext, useEffect, useState } from 'react'
 import '../App.css'
 import GameContext from '../context/Context'
 import GuessStatsBoard from '../components/GuessStatsBoard'
+import data from "../../data/wordListDict-short.json"
+
 
 
 function UserPage() {
   const [user, setUser] = useContext(GameContext)
+  const [dictNumbers, setDictNumbers] = useState({})
   const [vocabNumbers, setVocabNumbers] = useState({})
 
   if (user === undefined) {
@@ -17,21 +20,15 @@ function UserPage() {
       acc[v.length] = acc[v.length] ? acc[v.length]+ 1 : 1;
       return acc;
     },{}))
-
-    // user.vocab.forEach((word) =>{
-    //   console.log(word.length)
-    //   console.log(word)
-    //   console.log(vocabNumbers[word.length])
-
-    //   if (vocabNumbers[word.length]=== undefined) {
-    //     vocabNumbers[word.length] = 1
-    //   } else {
-    //     vocabNumbers[word.length] ++
-    //   }
-    // })
-
   }, [user])
-  
+
+  useEffect(() => {
+    setDictNumbers(data.reduce((acc,v)=>{
+      acc[v.length] = acc[v.length] ? acc[v.length]+ 1 : 1;
+      return acc;
+    },{}))
+  }, [])
+
   return (
     <>
       <h1>User Info</h1>
@@ -41,7 +38,7 @@ function UserPage() {
       <hr/>
       <h3>Words found:</h3>
       <ul>
-        <li>2 Letter Words: __% ({vocabNumbers[2] || 0} found)</li>
+        <li>2 Letter Words: {(vocabNumbers[2] / dictNumbers[2]) || 0}% ({vocabNumbers[2] || 0} found)</li>
         <li>3 Letter Words: __% ({vocabNumbers[3] || 0} found)</li>
         <li>4 Letter Words: __% ({vocabNumbers[4] || 0} found)</li>
         <li>5 Letter Words: __% ({vocabNumbers[5] || 0} found)</li>
