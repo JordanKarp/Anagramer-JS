@@ -17,7 +17,7 @@ const GameSetupForm = ({user, setSize, setWinType, setTimeType}) => {
                 Time Setting:
                 <select name='timeType' id="time" onChange={e => setTimeType(e.target.value)}>
                     <option value="Slow" defaultValue={user.roundTime === 'Slow'}>Slow</option>
-                    <option value="Normal" defaultValue={user.roundTime === 'Normal'}>Normal</option>
+                    <option value="Normal" defaultValue={user.roundTime === 'Normal'} selected>Normal</option>
                     <option value="Fast" defaultValue={user.roundTime === 'Fast'}>Fast</option>
                 </select>
                 {/* <input type="radio" name='timeType' value="Slow" onChange={e => setTimeType(e.target.value)} defaultChecked={user.roundTime === 'Slow'} />
@@ -30,12 +30,18 @@ const GameSetupForm = ({user, setSize, setWinType, setTimeType}) => {
             <br/>
             <label>
                 Win Type:
-                <input type="radio" name='winType' value="60" onChange={e => setWinType(e.target.value)} defaultChecked={user.roundWin === '60'} />
+                <select name='winType' id="win" onChange={e => setWinType(e.target.value)}>
+                    <option value="60" defaultValue={user.roundTime === 'Slow'}>Easy</option>
+                    <option value="80" defaultValue={user.roundTime === 'Normal'}>Medium</option>
+                    <option value="100" defaultValue={user.roundTime === 'Fast'}>Hard</option>
+                </select>
+
+                {/* <input type="radio" name='winType' value="60" onChange={e => setWinType(e.target.value)} defaultChecked={user.roundWin === '60'} />
                 <label htmlFor="60">Easy: 60%</label>
                 <input type="radio" name='winType' value="80" onChange={e => setWinType(e.target.value)} defaultChecked={user.roundWin === '80'} />
                 <label htmlFor="80">80%</label>
                 <input type="radio" name='winType' value="100" onChange={e => setWinType(e.target.value)} defaultChecked={user.roundWin === '100'} />
-                <label htmlFor="100">100%</label>
+                <label htmlFor="100">100%</label> */}
             </label>
         </form>
     )
