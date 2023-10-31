@@ -23,7 +23,7 @@ function UserPage() {
   }, [user])
 
   useEffect(() => {
-    setDictNumbers(Object.values(words).flat(1).reduce((acc,v)=>{
+    setDictNumbers(Object.values(data).flat(1).reduce((acc,v)=>{
       acc[v.length] = acc[v.length] ? acc[v.length]+ 1 : 1;
       return acc;
     },{}))
