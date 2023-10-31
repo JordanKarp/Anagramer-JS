@@ -80,6 +80,7 @@ function GameSetup() {
     <>
       <h1>Game Setup</h1>
       <UserCorner user={user}/>
+      <GameOptions user={user}/>
       <GameSetupForm user={user} size={size} setSize={setSize} setWinType={setWinType} setTimeType={setTimeType} />
       <hr/>
       <GameStore user={user} setUser={setUser}/>
