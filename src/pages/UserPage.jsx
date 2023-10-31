@@ -12,8 +12,8 @@ function UserPage() {
   } 
 
   useEffect(() => {
-
-  }, [data])
+    console.log(user.vocab)
+  }, [user])
   
   return (
     <>
