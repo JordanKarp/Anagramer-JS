@@ -15,7 +15,8 @@ const GameOptions = ({user}) => {
                 </tr>
                 <tr>
                     <td><b>Size</b></td>
-                    <td><input type="number" pattern="[0-9]*" step='1' name="size" min="3" max="7" onChange={e => setSize(e.target.value)} defaultValue={user.roundSize} />}</td>
+                    {/* <td><input type="number" pattern="[0-9]*" step='1' name="size" min="3" max="7" onChange={e => setSize(e.target.value)} defaultValue={user.roundSize} /></td> */}
+                    <td><input type="number" pattern="[0-9]*" step='1' name="size" min="3" max="7" defaultValue={user.roundSize} /></td>
                     <td>{formatNumber(calcMult('size', size))} x</td>
                 </tr>
                 <tr>
