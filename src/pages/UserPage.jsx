@@ -31,7 +31,7 @@ function UserPage() {
       </ul>
       <hr/>
       <GuessStatsBoard guessStats={user.guessStats} />
-      <button onClick={() => javascript:history.back()}>Go Back</button>
+      <a href="javascript:history.back()">Go Back</a>
 
     </>
      )
