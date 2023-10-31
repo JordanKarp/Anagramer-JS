@@ -16,9 +16,9 @@ const GameSetupForm = ({user, setSize, setWinType, setTimeType}) => {
             <label>
                 Time Setting:
                 <select name='timeType' id="time" onChange={e => setTimeType(e.target.value)}>
-                    <option value="Slow" defaultChecked={user.roundTime === 'Slow'}>Slow</option>
-                    <option value="Normal" defaultChecked={user.roundTime === 'Normal'}>Normal</option>
-                    <option value="Fast" defaultChecked={user.roundTime === 'Fast'}>Fast</option>
+                    <option value="Slow" defaultValue={user.roundTime === 'Slow'}>Slow</option>
+                    <option value="Normal" defaultValue={user.roundTime === 'Normal'}>Normal</option>
+                    <option value="Fast" defaultValue={user.roundTime === 'Fast'}>Fast</option>
                 </select>
                 {/* <input type="radio" name='timeType' value="Slow" onChange={e => setTimeType(e.target.value)} defaultChecked={user.roundTime === 'Slow'} />
                 <label htmlFor="Slow">Slow</label>
