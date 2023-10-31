@@ -4,6 +4,8 @@ const GameSetupForm = ({user, setSize, setWinType, setTimeType}) => {
         return (
             <p>User not Loaded</p>
         )
+    } else {
+        console.log(user)
     }
 
     return (
@@ -17,7 +19,7 @@ const GameSetupForm = ({user, setSize, setWinType, setTimeType}) => {
                 Time Setting:
                 <select name='timeType' id="time" onChange={e => setTimeType(e.target.value)}>
                     <option value="Slow" defaultValue={user.roundTime === 'Slow'}>Slow</option>
-                    <option value="Normal" defaultValue={user.roundTime === 'Normal'} selected>Normal</option>
+                    <option value="Normal" defaultValue={user.roundTime === 'Normal'}>Normal</option>
                     <option value="Fast" defaultValue={user.roundTime === 'Fast'}>Fast</option>
                 </select>
                 {/* <input type="radio" name='timeType' value="Slow" onChange={e => setTimeType(e.target.value)} defaultChecked={user.roundTime === 'Slow'} />
