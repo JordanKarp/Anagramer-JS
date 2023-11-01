@@ -8,6 +8,7 @@ import './App.css'
 function App() {
     const [user, setUser] = useState({
         "userName": '',
+        "roundsPlayed": 0,
         "vocab": new Set(),
         "points": 0,
         "freebies": 3,

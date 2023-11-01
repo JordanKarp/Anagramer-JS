@@ -37,6 +37,7 @@ function UserPage() {
     <>
       <h1>User Info</h1>
       <h2>{user.userName}</h2>
+      <h3>Rounds Played: {user.roundsPlayed}</h3>
       <h3>Points: {formatNumber(user.points)}</h3>
       <h3>Freebies: {user.freebies}</h3>
       <hr/>
