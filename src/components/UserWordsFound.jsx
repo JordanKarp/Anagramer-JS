@@ -10,18 +10,21 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
         <table>
           <tbody>
             <tr>
+              <th>Color</th>
               <th>Size</th>
               <th>Percent</th>
               <th>Progress</th>
               <th>Totals</th>
             </tr>
             <tr>
+              <td style="color:red">&#9632;</td>
               <td>2</td>
               <td>{formatPercent(vocabNumbers[2] / dictNumbers[2])}%</td>
               <td><progress value={vocabNumbers[2] || 0} max={dictNumbers[2]}></progress></td>
               <td>{vocabNumbers[2] || 0} / {dictNumbers[2]}</td>
             </tr>
             <tr>
+              <td style="color:orange">&#9632;</td>
               <td>3</td>
               <td>{formatPercent(vocabNumbers[3] / dictNumbers[3])}%</td>
               <td><progress value={vocabNumbers[3] || 0} max={dictNumbers[3]}></progress></td>
