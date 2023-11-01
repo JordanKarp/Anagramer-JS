@@ -5,14 +5,6 @@ import { useEffect } from "react"
 import formatPercent from "../utils/formatPercent"
 
 const UserWordsFoundData = ({vocabNumbers, dictNumbers}) => {
-    const percentages = {}
-    
-    useEffect(() => {
-      for (let i=2;i<=7; i++) {
-        percentages[i] = formatPercent(vocabNumbers[i] / dictNumbers[i])
-      }
-    },[])
-
     return (
       <>
         <table>
@@ -25,7 +17,7 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers}) => {
             </tr>
             <tr>
               <td>2</td>
-              <td>{percentages[2]}%</td>
+              <td>{formatPercent(vocabNumbers[2] / dictNumbers[2])}%</td>
               <td><progress value={vocabNumbers[2] || 0} max={dictNumbers[2]}></progress></td>
               <td>{vocabNumbers[2] || 0} / {dictNumbers[2]}</td>
             </tr>
@@ -61,7 +53,7 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers}) => {
             </tr>
           </tbody>
         </table>
-        <div className="pie" style={{"--size-2-pct": 100 * (vocabNumbers[3] / dictNumbers[3]) }}></div>
+        <div className="pie" style={{"--size-2-pct": "" + formatPercent(vocabNumbers[7] / dictNumbers[7]) + '%'}}>pie</div>
       </>
     )
 }
