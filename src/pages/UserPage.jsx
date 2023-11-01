@@ -6,7 +6,7 @@ import data from "../../data/wordListDict-short.json"
 import formatPercent from '../utils/formatPercent'
 import formatNumber from '../utils/formatNumber'
 import GameProgressBar from '../components/GameProgressBar'
-import UserWordsFound from '../components/UserWordsFound'
+import UserWordsFoundData from '../components/UserWordsFound'
 
 
 
@@ -41,7 +41,7 @@ function UserPage() {
       <h3>Points: {formatNumber(user.points)}</h3>
       <h3>Freebies: {user.freebies}</h3>
       <hr/>
-      <UserWordsFound vocabNumbers={vocabNumbers} dictNumbers={dictNumbers}/>
+      <UserWordsFoundData vocabNumbers={vocabNumbers} dictNumbers={dictNumbers}/>
       {/* <h3>Words found:</h3>
       <ul>
         <li>2 Letter Words: {formatPercent(vocabNumbers[2] / dictNumbers[2])}% ({vocabNumbers[2] || 0} / {dictNumbers[2]})</li>
