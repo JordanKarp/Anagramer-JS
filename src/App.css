@@ -2,7 +2,12 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  --size-2-pct:
+  --size-2-pct: 10%;
+  --size-3-pct: 10%;
+  --size-4-pct: 10%;
+  --size-5-pct: 10%;
+  --size-6-pct: 10%;
+  --size-7-pct: 10%;
   /* border: 1px solid red; */
 
 }
@@ -113,6 +118,6 @@ table {
 .pie {
     width: 150px;
     height: 150px;
-    background-image: conic-gradient(green var(--size-2-pct), blue var(--size-2-pct), blue 81%, black 81%);
+    background-image: conic-gradient(red var(--size-2-pct), orange var(--size-2-pct), orange var(--size-3-pct), yellow var(--size-3-pct), yellow var(--size-4-pct), green var(--size-4-pct), green var(--size-5-pct), blue var(--size-5-pct), blue var(--size-6-pct), purple var(--size-6-pct), purple var(--size-7-pct), brown purple var(--size-7-pct));
     border-radius: 50%
 }
