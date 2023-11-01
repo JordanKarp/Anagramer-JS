@@ -4,7 +4,7 @@
 import { useEffect } from "react"
 import formatPercent from "../utils/formatPercent"
 
-const UserWordsFoundData = ({vocabNumbers, dictNumbers}) => {
+const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
     return (
       <>
         <table>
@@ -53,12 +53,12 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers}) => {
             </tr>
           </tbody>
         </table>
-        <div className="pie" style={{"--size-2-pct": "" + formatPercent(vocabNumbers[2] / dictNumbers[2]) + '%',
-                                    "--size-3-pct": "" + formatPercent(vocabNumbers[3] / dictNumbers[3]) + '%',
-                                    "--size-4-pct": "" + formatPercent(vocabNumbers[4] / dictNumbers[4]) + '%',
-                                    "--size-5-pct": "" + formatPercent(vocabNumbers[5] / dictNumbers[5]) + '%',
-                                    "--size-6-pct": "" + formatPercent(vocabNumbers[6] / dictNumbers[6]) + '%',
-                                    "--size-7-pct": "" + formatPercent(vocabNumbers[7] / dictNumbers[7]) + '%'}}>
+        <div className="pie" style={{"--size-2-pct": "" + formatPercent(vocabNumbers[2] / totalFound) + '%',
+                                    "--size-3-pct": "" + formatPercent(vocabNumbers[3] / totalFound) + '%',
+                                    "--size-4-pct": "" + formatPercent(vocabNumbers[4] / totalFound) + '%',
+                                    "--size-5-pct": "" + formatPercent(vocabNumbers[5] / totalFound) + '%',
+                                    "--size-6-pct": "" + formatPercent(vocabNumbers[6] / totalFound) + '%',
+                                    "--size-7-pct": "" + formatPercent(vocabNumbers[7] / totalFound) + '%'}}>
         </div>
       </>
     )
