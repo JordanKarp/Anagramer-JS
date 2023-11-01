@@ -126,3 +126,7 @@ table {
     border-radius: 50%;
     margin: auto;
 }
+.colorBox {
+  width: 10px;
+  height: 20px;
+}
