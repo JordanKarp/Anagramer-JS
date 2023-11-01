@@ -62,6 +62,7 @@ function GameResults() {
           'vocab': updatedVocab,
           'points': user.points + points,
           'guessStats': updatedStats,
+          'roundsPlayed': user.roundsPlayed + 1,
         })
         break
       case 'You lose.':
@@ -70,6 +71,7 @@ function GameResults() {
           'vocab': updatedVocab,
           'points': 0,
           'guessStats': updatedStats,
+          'roundsPlayed': user.roundsPlayed + 1,
         })
         break
     }
