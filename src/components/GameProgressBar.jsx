@@ -8,7 +8,7 @@ const GameProgressBar = ({value, max, winPercent}) => {
       //   </div>
       // </progress>
 
-      <meter value={value} min="0" max={max} high={max}>
+      <meter value={value} min="0" max={max} high={(winPercent/100) * max}>
         <div className="progressBar">
             <span>{percent}%</span>
         </div>
