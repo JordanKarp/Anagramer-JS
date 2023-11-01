@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  --size-2-pct: 10;
   /* border: 1px solid red; */
 
 }
@@ -110,8 +111,8 @@ table {
 }
 
 .pie {
-    width: 400px;
-    height: 400px;
-    background-image: conic-gradient(green 64%, blue 64%, blue 81%, black 81%);
+    width: 150px;
+    height: 150px;
+    background-image: conic-gradient(green var(--size-2-pct), blue var(--size-2-pct), blue 81%, black 81%);
     border-radius: 50%
 }

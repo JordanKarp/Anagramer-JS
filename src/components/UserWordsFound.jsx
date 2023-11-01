@@ -52,7 +52,7 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers}) => {
             </tr>
           </tbody>
         </table>
-        <div className="pie"></div>
+        <div className="pie" style={{"--size-2-pct": 100 * (vocabNumbers[3] / dictNumbers[3]) }}></div>
       </>
     )
 }
