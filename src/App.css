@@ -121,8 +121,8 @@ table {
 .pie {
     width: 150px;
     height: 150px;
-    background-image: conic-gradient(red var(--size-2-pct), orange 75% 95%, yellow 95%);
-    /* background-image: conic-gradient(red var(--size-2-pct), orange var(--size-2-pct), orange var(--size-3-pct), yellow var(--size-3-pct), yellow var(--size-4-pct), green var(--size-4-pct), green var(--size-5-pct), blue var(--size-5-pct), blue var(--size-6-pct), purple var(--size-6-pct), purple var(--size-7-pct), brown purple var(--size-7-pct)); */
+    /* background-image: conic-gradient(red var(--size-2-pct), orange 75% 95%, yellow 95%); */
+    background-image: conic-gradient(red var(--size-2-pct), orange var(--size-2-pct) var(--size-3-pct), yellow var(--size-3-pct) var(--size-4-pct), green var(--size-4-pct) var(--size-5-pct), blue var(--size-5-pct) var(--size-6-pct), purple var(--size-6-pct) var(--size-7-pct), brown var(--size-7-pct));
     border-radius: 50%;
     margin: auto;
 }
