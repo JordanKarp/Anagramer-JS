@@ -3,17 +3,12 @@
 // import formatNumber from "../utils/formatNumber"
 import { useEffect } from "react"
 import formatPercent from "../utils/formatPercent"
-import useExternalScripts from "../hooks/useExternalScript"
-
+import {CompactPicker} from 'react-color'
 const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
 
     return (
       <>
-        <button name="myColorButton" className="jscolor" data-jscolor={{
-          value: 'rgba(51,153,255,0.5)',
-          backgroundColor: '#333',
-          onInput: 'console.log(this.toString() + \' \' + this.targetElement.name)',
-        }}>Pick color</button>
+        <CompactPicker color={{r: 255, g: 0, b: 0}}/>
         <table>
           <tbody>
             <tr>
