@@ -2,7 +2,7 @@
 
 import React from 'react'
 import reactCSS from 'reactcss'
-import { CompactPickerPicker } from 'react-color'
+import { CompactPicker } from 'react-color'
 
 class SizeColorPicker extends React.Component {
   state = {
@@ -66,7 +66,7 @@ class SizeColorPicker extends React.Component {
         </div>
         { this.state.displayColorPicker ? <div style={ styles.popover }>
           <div style={ styles.cover } onClick={ this.handleClose }/>
-          <SketchPicker color={ this.state.color } onChange={ this.handleChange } />
+          <CompactPicker color={ this.state.color } onChange={ this.handleChange } />
         </div> : null }
 
       </div>
