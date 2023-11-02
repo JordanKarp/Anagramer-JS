@@ -3,12 +3,12 @@
 // import formatNumber from "../utils/formatNumber"
 import { useEffect } from "react"
 import formatPercent from "../utils/formatPercent"
+import useExternalScripts from "../hooks/useExternalScript"
 
 const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
 
     return (
       <>
-        <button data-jscolor="{preset:'dark', width:250, paletteCols:15, value:'rgba(51,153,255,0.5)'}">Color</button>
         <table>
           <tbody>
             <tr>
@@ -19,8 +19,7 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
               <th>Totals</th>
             </tr>
             <tr>
-              {/* <td className='colorBox' style={{background:'red'}}></td> */}
-              <td></td>
+              <td className='colorBox' style={{background:'red'}}></td>
               <td>2</td>
               <td>{formatPercent(vocabNumbers[2] / dictNumbers[2])}%</td>
               <td><progress value={vocabNumbers[2] || 0} max={dictNumbers[2]}></progress></td>
@@ -63,12 +62,14 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
             </tr>
           </tbody>
         </table>
-        <div className="pie" style={{"--size-2-pct": "" + formatPercent(vocabNumbers[2] / totalFound) + '%',
-                                    "--size-3-pct": "" + formatPercent((vocabNumbers[3] + vocabNumbers[2]) / totalFound) + '%',
-                                    "--size-4-pct": "" + formatPercent((vocabNumbers[4] + vocabNumbers[3] + vocabNumbers[2]) / totalFound) + '%',
-                                    "--size-5-pct": "" + formatPercent((vocabNumbers[5] + vocabNumbers[4] + vocabNumbers[3] + vocabNumbers[2]) / totalFound) + '%',
-                                    "--size-6-pct": "" + formatPercent(vocabNumbers[6] / totalFound) + '%',
-                                    "--size-7-pct": "" + formatPercent(vocabNumbers[7] / totalFound) + '%'}}>
+        <div className="pie" style={{
+          "--size-2-pct": "" + formatPercent(vocabNumbers[2] / totalFound) + '%',
+          "--size-3-pct": "" + formatPercent((vocabNumbers[3] + vocabNumbers[2]) / totalFound) + '%',
+          "--size-4-pct": "" + formatPercent((vocabNumbers[4] + vocabNumbers[3] + vocabNumbers[2]) / totalFound) + '%',
+          "--size-5-pct": "" + formatPercent((vocabNumbers[5] + vocabNumbers[4] + vocabNumbers[3] + vocabNumbers[2]) / totalFound) + '%',
+          "--size-6-pct": "" + formatPercent((vocabNumbers[6] + vocabNumbers[5] + vocabNumbers[4] + vocabNumbers[3] + vocabNumbers[2]) / totalFound) + '%',
+          "--size-7-pct": "" + formatPercent((vocabNumbers[7] + vocabNumbers[6] + vocabNumbers[5] + vocabNumbers[4] + vocabNumbers[3] + vocabNumbers[2]) / totalFound) + '%'
+        }}>
         </div>
       </>
     )
