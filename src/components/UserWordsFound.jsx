@@ -6,7 +6,6 @@ import formatPercent from "../utils/formatPercent"
 import useExternalScripts from "../hooks/useExternalScript"
 
 const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
-    useExternalScripts("https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.5.1/jscolor.min.js")
 
     return (
       <>
