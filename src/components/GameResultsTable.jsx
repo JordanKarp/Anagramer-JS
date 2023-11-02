@@ -1,4 +1,5 @@
 import formatNumber from "../utils/formatNumber"
+import formatPercent from "../utils/formatPercent"
 
 const GameResultsTable = ({wordsFound, mult, points}) => {
     const wordRow = (word) => {
@@ -9,7 +10,7 @@ const GameResultsTable = ({wordsFound, mult, points}) => {
                 <td>*</td>
                 <td>{mult}</td>
                 <td>=</td>
-                <td>{Math.round(word.length * mult * 100) / 100}</td>
+                <td>{formatPercent(word.length * mult)}</td>
             </tr>
         )
     }

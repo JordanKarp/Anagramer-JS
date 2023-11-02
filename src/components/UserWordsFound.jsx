@@ -1,15 +1,9 @@
-// import { calcMult, calcTotalMult } from "../data/mutlipliers"
-// import { formatTime } from "../data/time"
-// import formatNumber from "../utils/formatNumber"
-import { useEffect } from "react"
 import formatPercent from "../utils/formatPercent"
-import SizeColorPicker from "./ColorPicker"
-const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
 
+
+const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
     return (
       <>
-        {/* <SizeColorPicker /> */}
-        <input type="color" />
         <table>
           <tbody>
             <tr>

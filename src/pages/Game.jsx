@@ -149,7 +149,7 @@ function Game() {
 
   return (
     <div className='gameBoard'>
-      <TargetHeader target={target.toUpperCase()} />
+      <TargetHeader target={target} />
       <GameCorner initialTime={time} gameOver={gameOver} wordsFound={wordsFound.length.toString()} totalWords={anagrams.length} winType={user.roundWin} />
       <GameGuess guessWord={guessWord} guessRef={guessRef} />
       <GameLogs logs={logs} />
