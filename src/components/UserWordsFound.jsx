@@ -8,7 +8,7 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
 
     return (
       <>
-        <CompactPicker color={{r: 255, g: 0, b: 0}}/>
+        <CompactPicker />
         <table>
           <tbody>
             <tr>
