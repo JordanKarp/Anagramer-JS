@@ -3,12 +3,12 @@
 // import formatNumber from "../utils/formatNumber"
 import { useEffect } from "react"
 import formatPercent from "../utils/formatPercent"
-import {CompactPicker} from 'react-color'
+import SizeColorPicker from "./ColorPicker"
 const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
 
     return (
       <>
-        <CompactPicker />
+        <SizeColorPicker />
         <table>
           <tbody>
             <tr>
