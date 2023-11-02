@@ -8,7 +8,8 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
 
     return (
       <>
-        <SizeColorPicker />
+        {/* <SizeColorPicker /> */}
+        <input type="color" />
         <table>
           <tbody>
             <tr>
