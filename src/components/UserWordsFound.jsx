@@ -9,7 +9,7 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
 
     return (
       <>
-        <button data-jscolor="{}">2</button>
+        <button data-jscolor={"{}"}>2</button>
         <table>
           <tbody>
             <tr>
