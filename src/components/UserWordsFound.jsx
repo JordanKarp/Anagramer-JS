@@ -3,7 +3,6 @@
 // import formatNumber from "../utils/formatNumber"
 import { useEffect } from "react"
 import formatPercent from "../utils/formatPercent"
-import useExternalScripts from "../hooks/useExternalScript"
 
 const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
 
