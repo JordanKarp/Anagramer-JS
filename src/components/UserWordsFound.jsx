@@ -9,11 +9,11 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
 
     return (
       <>
-        <button name="myColorButton" className="jscolor" data-jscolor="{
+        <button name="myColorButton" className="jscolor" data-jscolor={{
           value: 'rgba(51,153,255,0.5)',
           backgroundColor: '#333',
           onInput: 'console.log(this.toString() + \' \' + this.targetElement.name)',
-        }">Pick color</button>
+        }}>Pick color</button>
         <table>
           <tbody>
             <tr>
