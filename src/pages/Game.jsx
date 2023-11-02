@@ -57,7 +57,7 @@ function Game() {
     let guessObj = {guess:guessRef.current.value}
     let {guess} = guessObj
     guess = guess.toLowerCase().trim()
-    if (guess === '' || anagrams === []) {
+    if (guess === '' ) {
       return
     }
 
