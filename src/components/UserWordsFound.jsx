@@ -6,7 +6,7 @@ import formatPercent from "../utils/formatPercent"
 import useExternalScripts from "../hooks/useExternalScript"
 
 const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
-    useExternalScripts('../utils/jscolor.js')
+    useExternalScripts("https://cdnjs.com/libraries/jscolor")
 
     return (
       <>
@@ -21,7 +21,7 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
             </tr>
             <tr>
               {/* <td className='colorBox' style={{background:'red'}}></td> */}
-              <td><button data-jscolor="{preset: 'dark,value:'rgb(255,0,0)' }"></button></td>
+              <td><button data-jscolor="{}"></button></td>
               <td>2</td>
               <td>{formatPercent(vocabNumbers[2] / dictNumbers[2])}%</td>
               <td><progress value={vocabNumbers[2] || 0} max={dictNumbers[2]}></progress></td>
