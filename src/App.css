@@ -7,10 +7,10 @@
     --size-7-pct: 0%;
     --size-2-clr: rgb(255,0,0);
     --size-3-clr: rgb(255,165,0);
-    --size-4-clr: rgb(255,165,0);
-    --size-5-clr: rgb(255,165,0);
-    --size-6-clr: rgb(255,165,0);
-    --size-7-clr: rgb(255,165,0);
+    --size-4-clr: rgb(255,255,0);
+    --size-5-clr: rgb(0,255,0);
+    --size-6-clr: rgb(0,0,255);
+    --size-7-clr: rgb(128,0,128);
 }
 
 * {
