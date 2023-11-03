@@ -10,7 +10,7 @@ const GameResultsTable = ({wordsFound, mult, points}) => {
                 <td>*</td>
                 <td>{mult}</td>
                 <td>=</td>
-                <td>{formatPercent(word.length * mult)}</td>
+                <td>{formatNumber(word.length * mult)}</td>
             </tr>
         )
     }
