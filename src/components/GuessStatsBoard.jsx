@@ -1,5 +1,3 @@
-import formatNumber from "../utils/formatNumber"
-
 const GuessStatsBoard = ({guessStats}) => {
     let strictAcc = formatNumber(100 * guessStats.correct / guessStats.total) || 0
     let acc = formatNumber(100 * guessStats.correct / (guessStats.total - guessStats.repeat - guessStats.freebies)) || 0
