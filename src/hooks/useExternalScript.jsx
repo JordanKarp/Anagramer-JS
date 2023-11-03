@@ -7,7 +7,6 @@ export default function useExternalScripts(url){
 
     script.setAttribute("src", url);
     head.appendChild(script);
-    console.log(url)
 
     return () => {
       head.removeChild(script);
