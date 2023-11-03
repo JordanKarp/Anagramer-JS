@@ -10,6 +10,7 @@ import GameLogs from '../components/GameLogs.jsx';
 import GameGuess from '../components/GameGuess.jsx';
 import GameWordsFound from '../components/GameWordsFound.jsx';
 import GameCorner from '../components/GameCorner.jsx';
+import sound from './assets/correct.wav'
 
 
 function Game() {
@@ -33,7 +34,7 @@ function Game() {
   const navigate = useNavigate('')
   const location = useLocation()
 
-  const correctSound = new Audio('./assets/correct.wav')
+  const correctSound = new Audio(sound);
 
   const playCorrectSound = () => {
     const promise = correctSound.play();
