@@ -6,7 +6,7 @@
     --size-6-pct: 0%;
     --size-7-pct: 0%;
     --size-2-clr: rgb(255,0,0);
-    --size-2-clr: rgb(255,165,0);
+    --size-3-clr: rgb(255,165,0);
 
 }
 
@@ -124,7 +124,7 @@ table {
 .pie {
     width: 100px;
     height: 100px;
-    background-image: conic-gradient(var(--size-2-clr) var(--size-2-pct), orange var(--size-2-pct) var(--size-3-pct), yellow var(--size-3-pct) var(--size-4-pct), green var(--size-4-pct) var(--size-5-pct), blue var(--size-5-pct) var(--size-6-pct), purple var(--size-6-pct) var(--size-7-pct));
+    background-image: conic-gradient(var(--size-2-clr) var(--size-2-pct), var(--size-3-clr) var(--size-2-pct) var(--size-3-pct), var(--size-4-clr) var(--size-3-pct) var(--size-4-pct), green var(--size-4-pct) var(--size-5-pct), blue var(--size-5-pct) var(--size-6-pct), purple var(--size-6-pct) var(--size-7-pct));
     border-radius: 50%;
     margin: 10px auto;
     border: 1px solid rgba(0, 0, 0, 0.3);
