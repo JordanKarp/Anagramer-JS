@@ -6,6 +6,8 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
       console.log(event.target.name)
       console.log(event.target.value)
       console.log(event.target)
+      const r = document.querySelector(':root');
+      r.style.setProperty('--size-' + event.target.name + '-clr', event.target.value)
     }
 
     return (
