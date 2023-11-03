@@ -34,7 +34,20 @@ function Game() {
   const location = useLocation()
 
   const correctSound = new Audio('../assets/correct.wav')
-  console.log(correctSound)
+
+  const playCorrectSound = () => {
+    const promise = correctSound.play();
+    if (promise !== undefined) { // On older browsers play() does not return anything, so the value would be undefined.
+      promise
+        .then(() => {
+          // Audio is playing.
+          console.log('played!')
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+  }
 
   const activateFreebie = () => {
     let logMessage = ''
@@ -79,8 +92,7 @@ function Game() {
     } else if (anagrams.includes(guess)) {
       setWordsFound((words)=> words.concat(guess))
       logMessage = `${guess.toUpperCase()} has been added.`
-      console.log(correctSound)
-      correctSound.play()
+      playCorrectSound()
       setGuessStats((prev) => {return ({...prev,
         'total': prev.total + 1,
         'correct': prev.correct + 1,
