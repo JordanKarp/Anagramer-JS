@@ -27,7 +27,8 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
               <td>{vocabNumbers[2] || 0} / {dictNumbers[2]}</td>
             </tr>
             <tr>
-              <td className='colorBox' style={{background:"orange"}}></td>
+              {/* <td className='colorBox' style={{background:"orange"}}></td> */}
+              <td><input type="color" name='3' value='#ffa500' onChange={changeSizeNumColor}/></td>
               <td>3</td>
               <td>{formatPercent(vocabNumbers[3] / dictNumbers[3])}%</td>
               <td><progress value={vocabNumbers[3] || 0} max={dictNumbers[3]}></progress></td>
