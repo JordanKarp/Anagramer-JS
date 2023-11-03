@@ -10,9 +10,8 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
       // picker.value = getComputedStyle(r).getPropertyValue('--size-' + event.target.name + '-clr')
     }
     const changeSizeNumColor = (event) => {
-      const picker = document.getElementById(event.target.id);
-      picker.value = event.target.value;
-      console.log(picker)
+      // const picker = document.getElementById(event.target.id);
+      // picker.value = event.target.value;
       const r = document.querySelector(':root');
       r.style.setProperty('--size-' + event.target.name + '-clr', event.target.value)
     }
