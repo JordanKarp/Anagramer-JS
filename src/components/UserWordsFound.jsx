@@ -2,6 +2,11 @@ import formatPercent from "../utils/formatPercent"
 
 
 const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
+    const changeSizeNumColor = (event) => {
+      console.log(event.target.name)
+      console.log(event.target.value)
+    }
+
     return (
       <>
         <table>
@@ -14,7 +19,8 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
               <th>Totals</th>
             </tr>
             <tr>
-              <td className='colorBox' style={{background:'red'}}></td>
+              {/* <td className='colorBox' style={{background:'red'}}></td> */}
+              <td><input type="color" onChange={changeSizeNumColor}/></td>
               <td>2</td>
               <td>{formatPercent(vocabNumbers[2] / dictNumbers[2])}%</td>
               <td><progress value={vocabNumbers[2] || 0} max={dictNumbers[2]}></progress></td>
@@ -58,6 +64,7 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
           </tbody>
         </table>
         <div className="pie" style={{
+          "--size-2-clr": "" + 
           "--size-2-pct": "" + formatPercent(vocabNumbers[2] / totalFound) + '%',
           "--size-3-pct": "" + formatPercent((vocabNumbers[3] + vocabNumbers[2]) / totalFound) + '%',
           "--size-4-pct": "" + formatPercent((vocabNumbers[4] + vocabNumbers[3] + vocabNumbers[2]) / totalFound) + '%',
