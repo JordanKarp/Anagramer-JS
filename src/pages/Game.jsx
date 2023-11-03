@@ -33,6 +33,8 @@ function Game() {
   const navigate = useNavigate('')
   const location = useLocation()
 
+  const correctSound = new Audio('correct.wav')
+
   const activateFreebie = () => {
     let logMessage = ''
     if (user.freebies >= 1 ) {
@@ -41,7 +43,7 @@ function Game() {
       setUser((prev) => {return ({...prev,
         'freebies': prev.freebies - 1
       })})
-      logMessage = `Freebie used. Found ${freebieWord}.`
+      logMessage = `Freebie used. Found ${freebieWord.toUpperCase()}.`
       setGuessStats((prev) => {return ({...prev,
         'total': prev.total + 1,
         'freebies': prev.freebies + 1,
@@ -76,6 +78,7 @@ function Game() {
     } else if (anagrams.includes(guess)) {
       setWordsFound((words)=> words.concat(guess))
       logMessage = `${guess.toUpperCase()} has been added.`
+      correctSound.play()
       setGuessStats((prev) => {return ({...prev,
         'total': prev.total + 1,
         'correct': prev.correct + 1,
