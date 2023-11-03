@@ -33,7 +33,7 @@ function Game() {
   const navigate = useNavigate('')
   const location = useLocation()
 
-  const correctSound = new Audio('correct.wav')
+  const correctSound = new Audio('../assets/correct.wav')
 
   const activateFreebie = () => {
     let logMessage = ''
