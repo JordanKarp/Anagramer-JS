@@ -2,6 +2,13 @@ import formatPercent from "../utils/formatPercent"
 
 
 const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
+
+    const loadDefaultNumColor = (event) => {
+      const r = document.querySelector(':root');
+      const picker = document.getElementById(event.target.id);
+      console.log(getComputedStyle(r).getPropertyValue('--size-' + event.target.name + '-clr'))
+      // picker.value = getComputedStyle(r).getPropertyValue('--size-' + event.target.name + '-clr')
+    }
     const changeSizeNumColor = (event) => {
       const picker = document.getElementById(event.target.id);
       picker.value = event.target.value;
@@ -22,7 +29,7 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
               <th>Totals</th>
             </tr>
             <tr>
-              <td><input type="color" name='2' id='picker2' defaultValue='#ff0000' onInput={changeSizeNumColor}/></td>
+              <td><input type="color" name='2' id='picker2' onInput={changeSizeNumColor} onLoad={loadDefaultNumColor}/></td>
               <td>2</td>
               <td>{formatPercent(vocabNumbers[2] / dictNumbers[2])}%</td>
               <td><progress value={vocabNumbers[2] || 0} max={dictNumbers[2]}></progress></td>
