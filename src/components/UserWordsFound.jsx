@@ -11,7 +11,7 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
     }
     const changeSizeNumColor = (event) => {
       // const picker = document.getElementById(event.target.id);
-      // picker.value = event.target.value;
+      // picker.value = event.target.value
       const r = document.querySelector(':root');
       r.style.setProperty('--size-' + event.target.name + '-clr', event.target.value)
     }
