@@ -4,7 +4,7 @@ import formatPercent from "../utils/formatPercent"
 const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
     const changeSizeNumColor = (event) => {
       const picker = document.getElementById(event.target.id);
-      picker.defaultValue = event.target.value;
+      picker.value = event.target.value;
       console.log(picker)
       const r = document.querySelector(':root');
       r.style.setProperty('--size-' + event.target.name + '-clr', event.target.value)
