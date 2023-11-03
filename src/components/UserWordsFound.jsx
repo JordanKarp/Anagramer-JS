@@ -13,6 +13,8 @@ const UserWordsFoundData = ({vocabNumbers, dictNumbers, totalFound}) => {
       // const picker = document.getElementById(event.target.id);
       // picker.value = event.target.value
       const r = document.querySelector(':root');
+      console.log(getComputedStyle(r).getPropertyValue('--size-' + event.target.name + '-clr'))
+
       r.style.setProperty('--size-' + event.target.name + '-clr', event.target.value)
     }
 
