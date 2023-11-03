@@ -33,7 +33,7 @@ function Game() {
   const navigate = useNavigate('')
   const location = useLocation()
 
-  const correctSound = new Audio('../assets/correct.wav')
+  const correctSound = new Audio('./assets/correct.wav')
 
   const playCorrectSound = () => {
     const promise = correctSound.play();
