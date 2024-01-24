@@ -86,9 +86,6 @@ function GameResults() {
       <p>You learned {wordsFound && wordsFound.join(', ').toUpperCase()}</p>
       <GameResultsTable wordsFound={wordsFound} mult={mult} points={points} />
       <button onClick={() => navigate('/setup')} autoFocus>Proceed!</button>
-      {/* <p>{[...user.vocab].sort().join(', ')}</p> */}
-
-
     </>
      )
 }
