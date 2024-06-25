@@ -19,7 +19,8 @@ function Welcome() {
 
     if (e.nativeEvent.submitter.value === 'play') {
       setMsg('play')
-    navigate('/setup')
+      navigate('/setup')
+    }
   }
   //   if (e.nativeEvent.submitter.value === 'signIn') {
   //     setMsg('signIn')
@@ -72,5 +73,4 @@ function Welcome() {
     </>
   )
 }
-}
-export default Welcome;
+export default Welcome
