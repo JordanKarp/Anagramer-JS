@@ -40,9 +40,12 @@ function Welcome() {
   return (
     <>
       <h1 className="title">Anagramer</h1>
+      <br></br>
+      <br></br>
       <h2 className="explaination">Create every word possible out of the given letters</h2>
       <h3 className="explaination">Get 75% of all the words to proceed (100% for a bonus!)</h3>
       <h3 className="explaination">Each word is 'learned' and will never need repeating - build your vocabulary!</h3>
+      <br></br>
       <div className="signIn">
         <form onSubmit={proceed} autoComplete="off">
           <div>
