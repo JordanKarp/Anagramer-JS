@@ -9,6 +9,10 @@ function Welcome() {
   const [msg, setMsg] = useState('')
   const navigate = useNavigate()
 
+  const randUserName = (e) => {
+      return "NewUser"
+  }
+
   const proceed = (e) => {
     e.preventDefault()
       // Send the login data to your server
@@ -45,9 +49,9 @@ function Welcome() {
             <input type="text" name="userName" value={userName} onChange={(e) => setUserName(e.target.value)} placeholder='userName' />
           </div>
   
-           <div>
-            <button type='submit' name='play' value="play" formAction="/login">Play</button>
-           </div>
+          <div>
+          <button type='submit' name='play' value="play" formAction="/login">Play</button>
+          </div>
         </form>
         {/* <form onSubmit={proceed} autoComplete="off">
           <div>
@@ -68,5 +72,5 @@ function Welcome() {
     </>
   )
 }
-
+}
 export default Welcome;
